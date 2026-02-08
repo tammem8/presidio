@@ -1,0 +1,38 @@
+version: "3"
+
+tasks:
+
+  install:
+    desc: Install project dependencies
+    cmds:
+      - uv sync
+  
+  lint:
+    desc: Run linter
+    cmds:
+      - uv run ruff check --fix .
+
+  format:
+    desc: Format code
+    cmds:
+      - uv run ruff format .
+
+  test:
+    desc: Run tests
+    cmds:
+      - uv run pytest
+
+  detector:generate:
+    desc: Generate fake PII data using Presidio Evaluator
+    cmds:
+      - uv run resources/generate_fake_data.py --config resources/config/sample_config.json --output resources/data
+
+  detector:evaluate:
+    desc: Evaluate PII detection on a JSON dataset
+    cmds:
+      - uv run resources/evaluate_dataset.py --input resources/data/fake_pii_data_size_200_en_US.json --output evaluation_output --analyzer-config resources/config/analyzer_config.json
+
+  detector:prompt_evaluate:
+    desc: Evaluate PII detection using prompt-based approach
+    cmds:
+      - uv run resources/evaluate_prompt.py --text "John Doe's email is john.doe@example.com" --language "en"

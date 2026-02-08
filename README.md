@@ -4,48 +4,41 @@ A tool for generating fake PII (Personally Identifiable Information) data using 
 
 ## Features
 
-- Generate fake data from customizable sentence templates
+- Generate fake data from customizable sentence templates and custom providers
 - Support for multiple locales/languages
-- Custom providers for SSL keys and fingerprint hashes
-- JSON output compatible with Presidio Evaluator
+- Analyzer and custom recognizers
+- Dataset evaluation with Presidio's framework, metrics and insights
+- Prompt evaluation 
 
 ## Installation
 
+```bash
+task install
+```
+Or
 ```bash
 uv sync
 ```
 
 ## Usage
 
-### Command Line
+### Task Commands
+
+| Command | Description |
+|---------|-------------|
+| `task lint` | Run linter with auto-fix |
+| `task format` | Format code |
+| `task test` | Run tests |
+
+### Generate Fake PII Data
+
+Generate fake PII data using customizable sentence templates:
 
 ```bash
-python generate_fake_data.py --config <config_path> --output <output_folder> [options]
+task detector:generate
 ```
 
-#### Arguments
-
-| Argument | Short | Required | Description |
-|----------|-------|----------|-------------|
-| `--config` | `-c` | Yes | Path to JSON config file containing sentence_templates and other settings |
-| `--output` | `-o` | Yes | Output folder path where to write the generated JSON file |
-| `--num-samples` | `-n` | No | Number of samples to generate (overrides config value) |
-| `--language` | `-l` | No | Language/locale to use, e.g., `en_US`, `de_DE` (overrides config value) |
-
-#### Examples
-
-```bash
-# Basic usage
-python generate_fake_data.py --config resources/config/sample_config.json --output ./resources/data
-
-# Generate 500 samples
-python generate_fake_data.py -c resources/config/sample_config.json -o ./output -n 500
-
-# Generate German data
-python generate_fake_data.py -c resources/config/sample_config.json -o ./output -l de_DE
-```
-
-## Configuration
+#### Data generation configuration
 
 Create a JSON config file with the following structure:
 
@@ -64,23 +57,56 @@ Create a JSON config file with the following structure:
 }
 ```
 
-### Config Options
-
-| Field | Required | Default | Description |
-|-------|----------|---------|-------------|
-| `sentence_templates` | Yes | - | List of sentence templates with `{{entity}}` placeholders |
-| `language` | No | `en_US` | Faker locale for data generation |
-| `number_of_samples` | No | `100` | Number of samples to generate |
-| `lower_case_ratio` | No | `0.05` | Ratio of lowercase text in output |
-| `output_name` | No | `generated_data` | Prefix for output filename |
-
-### Supported Entities
-
-Standard Faker entities plus custom providers:
-
-- **Standard**: `name`, `address`, `city`, `country`, `phone_number`, `credit_card`, `iban`, `email`, `date_of_birth`, etc.
-- **Custom**: `ssl_key`, `fingerprint_hash`
-
-## Output
-
 The script generates a JSON file in the Presidio Evaluator `InputSample` format, which can be used for training and evaluating PII detection models.
+
+### Analyzer Configuration
+
+Create a JSON config file with the following structure:
+
+| Field | Required | Description |
+|-------|----------|-------------|
+| `nlp_engine_name` | Yes | NLP engine to use (e.g., `spacy`) |
+| `model_name` | Yes | Model name (e.g., `en_core_web_sm`, `en_core_web_lg`) |
+| `language` | Yes | Language code (e.g., `en`) |
+| `context_enhancer_count` | No | Number of context words to consider for enhancing detection |
+| `recognizers_to_keep` | No | List of built-in recognizers to enable (e.g., `SpacyRecognizer`, `EmailRecognizer`) |
+| `custom_recognizers` | No | List of custom pattern-based recognizers |
+| `entity_mappings` | No | Mappings from source entity types to target types |
+| `allow_missing_mappings` | No | If `true`, entities without explicit mappings keep their original type. If `false`, unmapped entities raise an error. Default: `true` |
+| `score_threshold` | No | Minimum confidence score for detections (0.0 - 1.0) |
+
+### Custom Recognizers
+
+Define custom pattern-based recognizers for entities not covered by built-in recognizers:
+
+```json
+{
+    "entity_type": "SSL",
+    "patterns": [
+        {
+            "name": "ssl_key_pattern",
+            "regex": "-----BEGIN\\s+(RSA\\s+)?PRIVATE\\s+KEY-----[\\s\\S]*?-----END\\s+(RSA\\s+)?PRIVATE\\s+KEY-----",
+            "score": 0.6
+        }
+    ]
+}
+```
+
+### Evaluate Dataset
+
+Evaluate Presidio's PII detection accuracy against a JSON dataset containing labeled PII samples. This command runs the analyzer on the dataset, compares predictions against ground truth, and outputs:
+- Precision, recall, and F-score metrics (`metrics.json`)
+- False positives and false negatives (`false_positives.csv`, `false_negatives.csv`)
+- Confusion matrix visualization (`confusion_matrix.html`)
+
+```bash
+task detector:evaluate
+```
+
+### Evaluate Prompt
+
+Analyze a single text input for PII entities in real-time. This is useful for quick testing and debugging of the analyzer configuration. The command displays detected entities with their type, position, confidence score, and analysis time.
+
+```bash
+task detector:prompt_evaluate
+```
