@@ -7,54 +7,6 @@ import pandas as pd
 from pydantic import BaseModel, ConfigDict, Field
 
 
-class PatternConfig(BaseModel):
-    """Pattern recognizer configuration."""
-
-    name: str
-    regex: str
-    score: float = 0.9
-
-
-class RecognizerConfig(BaseModel):
-    """Custom recognizer configuration."""
-
-    entity_type: str
-    patterns: List[PatternConfig]
-
-
-class EntityMappingConfig(BaseModel):
-    """Entity type mapping configuration."""
-
-    source: str
-    target: str
-
-
-class AnalyzerConfig(BaseModel):
-    """Complete analyzer configuration including NLP settings."""
-
-    # NLP settings
-    nlp_engine_name: str = "spacy"
-    model_name: str = "en_core_web_sm"
-    language: str = "en"
-
-    # Analyzer settings
-    default_score_threshold: float = 0.4
-    recognizers_to_keep: Optional[List[str]] = None
-    custom_recognizers: List[RecognizerConfig] = Field(default_factory=list)
-    entity_mappings: List[EntityMappingConfig] = Field(default_factory=list)
-    context_enhancer_count: Optional[int] = None
-
-
-class EntityMetrics(BaseModel):
-    """Metrics for a single entity type."""
-
-    entity_type: str
-    count: int
-    precision: float
-    recall: float
-    f1_score: float
-
-
 class EvaluationMetrics(BaseModel):
     """Overall evaluation metrics."""
 

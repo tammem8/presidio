@@ -1,0 +1,3802 @@
+[
+    {
+        "full_text": "My date of birth is 1/27/1952",
+        "masked": "My date of birth is {{DATE_TIME}}",
+        "spans": [
+            {
+                "entity_type": "DATE_TIME",
+                "entity_value": "1/27/1952",
+                "start_position": 20,
+                "end_position": 29,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 1,
+        "metadata": null
+    },
+    {
+        "full_text": "I was born in Iceland",
+        "masked": "I was born in {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "Iceland",
+                "start_position": 14,
+                "end_position": 21,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 3,
+        "metadata": null
+    },
+    {
+        "full_text": "Send the transaction to this GB28XCKF73212346572404",
+        "masked": "Send the transaction to this {{IBAN_CODE}}",
+        "spans": [
+            {
+                "entity_type": "IBAN_CODE",
+                "entity_value": "GB28XCKF73212346572404",
+                "start_position": 29,
+                "end_position": 51,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 7,
+        "metadata": null
+    },
+    {
+        "full_text": "I work with Hijacinta Godina",
+        "masked": "I work with {{PERSON}}",
+        "spans": [
+            {
+                "entity_type": "PERSON",
+                "entity_value": "Hijacinta Godina",
+                "start_position": 12,
+                "end_position": 28,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 0,
+        "metadata": null
+    },
+    {
+        "full_text": "Use this card number 345322222267272 to pay for it",
+        "masked": "Use this card number {{CREDIT_CARD}} to pay for it",
+        "spans": [
+            {
+                "entity_type": "CREDIT_CARD",
+                "entity_value": "345322222267272",
+                "start_position": 21,
+                "end_position": 36,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 6,
+        "metadata": null
+    },
+    {
+        "full_text": "Use this card number 4883570314009744418 to pay for it",
+        "masked": "Use this card number {{CREDIT_CARD}} to pay for it",
+        "spans": [
+            {
+                "entity_type": "CREDIT_CARD",
+                "entity_value": "4883570314009744418",
+                "start_position": 21,
+                "end_position": 40,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 6,
+        "metadata": null
+    },
+    {
+        "full_text": "I work with Nusa Márkus",
+        "masked": "I work with {{PERSON}}",
+        "spans": [
+            {
+                "entity_type": "PERSON",
+                "entity_value": "Nusa Márkus",
+                "start_position": 12,
+                "end_position": 23,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 0,
+        "metadata": null
+    },
+    {
+        "full_text": "Contact me at VictoriaMBruun@gustr.com for more information",
+        "masked": "Contact me at {{EMAIL_ADDRESS}} for more information",
+        "spans": [
+            {
+                "entity_type": "EMAIL_ADDRESS",
+                "entity_value": "VictoriaMBruun@gustr.com",
+                "start_position": 14,
+                "end_position": 38,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 5,
+        "metadata": null
+    },
+    {
+        "full_text": "I was born in Austria",
+        "masked": "I was born in {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "Austria",
+                "start_position": 14,
+                "end_position": 21,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 3,
+        "metadata": null
+    },
+    {
+        "full_text": "I was born in Estonia",
+        "masked": "I was born in {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "Estonia",
+                "start_position": 14,
+                "end_position": 21,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 3,
+        "metadata": null
+    },
+    {
+        "full_text": "My phone number is 467 20 767",
+        "masked": "My phone number is {{PHONE_NUMBER}}",
+        "spans": [
+            {
+                "entity_type": "PHONE_NUMBER",
+                "entity_value": "467 20 767",
+                "start_position": 19,
+                "end_position": 29,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 4,
+        "metadata": null
+    },
+    {
+        "full_text": "Tell me something you know about this fingerprint SHA256:E3:2B:99:36:FB:FD:8A:DD:6B:2F:AC:27:2A:50:17:7D",
+        "masked": "Tell me something you know about this fingerprint {{BIOMEDICAL}}",
+        "spans": [
+            {
+                "entity_type": "BIOMEDICAL",
+                "entity_value": "SHA256:E3:2B:99:36:FB:FD:8A:DD:6B:2F:AC:27:2A:50:17:7D",
+                "start_position": 50,
+                "end_position": 104,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 8,
+        "metadata": null
+    },
+    {
+        "full_text": "I need more information about this address Unit 1845 Box 5665\nDPO AE 72350",
+        "masked": "I need more information about this address {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "Unit 1845 Box 5665\nDPO AE 72350",
+                "start_position": 43,
+                "end_position": 74,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 2,
+        "metadata": null
+    },
+    {
+        "full_text": "Send the transaction to this GB67UTKV85141564336374",
+        "masked": "Send the transaction to this {{IBAN_CODE}}",
+        "spans": [
+            {
+                "entity_type": "IBAN_CODE",
+                "entity_value": "GB67UTKV85141564336374",
+                "start_position": 29,
+                "end_position": 51,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 7,
+        "metadata": null
+    },
+    {
+        "full_text": "Tell me something you know about this fingerprint SHA256:3C:F6:EF:2C:EC:FA:10:88:BF:CA:8C:7D:4F:E7:6A:90",
+        "masked": "Tell me something you know about this fingerprint {{BIOMEDICAL}}",
+        "spans": [
+            {
+                "entity_type": "BIOMEDICAL",
+                "entity_value": "SHA256:3C:F6:EF:2C:EC:FA:10:88:BF:CA:8C:7D:4F:E7:6A:90",
+                "start_position": 50,
+                "end_position": 104,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 8,
+        "metadata": null
+    },
+    {
+        "full_text": "Send the transaction to this GB34OCQK07944364297169",
+        "masked": "Send the transaction to this {{IBAN_CODE}}",
+        "spans": [
+            {
+                "entity_type": "IBAN_CODE",
+                "entity_value": "GB34OCQK07944364297169",
+                "start_position": 29,
+                "end_position": 51,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 7,
+        "metadata": null
+    },
+    {
+        "full_text": "Send the transaction to this GB23BITK10127325916619",
+        "masked": "Send the transaction to this {{IBAN_CODE}}",
+        "spans": [
+            {
+                "entity_type": "IBAN_CODE",
+                "entity_value": "GB23BITK10127325916619",
+                "start_position": 29,
+                "end_position": 51,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 7,
+        "metadata": null
+    },
+    {
+        "full_text": "I work with Aksel N Kristensen",
+        "masked": "I work with {{PERSON}}",
+        "spans": [
+            {
+                "entity_type": "PERSON",
+                "entity_value": "Aksel N Kristensen",
+                "start_position": 12,
+                "end_position": 30,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 0,
+        "metadata": null
+    },
+    {
+        "full_text": "Tell me something you know about this fingerprint SHA256:C7:26:6D:78:C9:DD:89:34:0C:39:2D:49:83:36:AE:C0",
+        "masked": "Tell me something you know about this fingerprint {{BIOMEDICAL}}",
+        "spans": [
+            {
+                "entity_type": "BIOMEDICAL",
+                "entity_value": "SHA256:C7:26:6D:78:C9:DD:89:34:0C:39:2D:49:83:36:AE:C0",
+                "start_position": 50,
+                "end_position": 104,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 8,
+        "metadata": null
+    },
+    {
+        "full_text": "My date of birth is 9/26/1947",
+        "masked": "My date of birth is {{DATE_TIME}}",
+        "spans": [
+            {
+                "entity_type": "DATE_TIME",
+                "entity_value": "9/26/1947",
+                "start_position": 20,
+                "end_position": 29,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 1,
+        "metadata": null
+    },
+    {
+        "full_text": "Use this card number 213182857852098 to pay for it",
+        "masked": "Use this card number {{CREDIT_CARD}} to pay for it",
+        "spans": [
+            {
+                "entity_type": "CREDIT_CARD",
+                "entity_value": "213182857852098",
+                "start_position": 21,
+                "end_position": 36,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 6,
+        "metadata": null
+    },
+    {
+        "full_text": "I work with Fernanda Cavalcanti",
+        "masked": "I work with {{PERSON}}",
+        "spans": [
+            {
+                "entity_type": "PERSON",
+                "entity_value": "Fernanda Cavalcanti",
+                "start_position": 12,
+                "end_position": 31,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 0,
+        "metadata": null
+    },
+    {
+        "full_text": "Tell me something you know about this fingerprint SHA256:37:D6:B1:3F:B7:5E:BB:84:62:C7:A6:99:53:7B:80:6C",
+        "masked": "Tell me something you know about this fingerprint {{BIOMEDICAL}}",
+        "spans": [
+            {
+                "entity_type": "BIOMEDICAL",
+                "entity_value": "SHA256:37:D6:B1:3F:B7:5E:BB:84:62:C7:A6:99:53:7B:80:6C",
+                "start_position": 50,
+                "end_position": 104,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 8,
+        "metadata": null
+    },
+    {
+        "full_text": "Send the transaction to this GB34VWUU40861152641757",
+        "masked": "Send the transaction to this {{IBAN_CODE}}",
+        "spans": [
+            {
+                "entity_type": "IBAN_CODE",
+                "entity_value": "GB34VWUU40861152641757",
+                "start_position": 29,
+                "end_position": 51,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 7,
+        "metadata": null
+    },
+    {
+        "full_text": "Send the transaction to this GB92BULV20063239141832",
+        "masked": "Send the transaction to this {{IBAN_CODE}}",
+        "spans": [
+            {
+                "entity_type": "IBAN_CODE",
+                "entity_value": "GB92BULV20063239141832",
+                "start_position": 29,
+                "end_position": 51,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 7,
+        "metadata": null
+    },
+    {
+        "full_text": "I work with Lucjusz Jasiński",
+        "masked": "I work with {{PERSON}}",
+        "spans": [
+            {
+                "entity_type": "PERSON",
+                "entity_value": "Lucjusz Jasiński",
+                "start_position": 12,
+                "end_position": 28,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 0,
+        "metadata": null
+    },
+    {
+        "full_text": "I work with Viva O Ujváry",
+        "masked": "I work with {{PERSON}}",
+        "spans": [
+            {
+                "entity_type": "PERSON",
+                "entity_value": "Viva O Ujváry",
+                "start_position": 12,
+                "end_position": 25,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 0,
+        "metadata": null
+    },
+    {
+        "full_text": "I was born in United Kingdom",
+        "masked": "I was born in {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "United Kingdom",
+                "start_position": 14,
+                "end_position": 28,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 3,
+        "metadata": null
+    },
+    {
+        "full_text": "My phone number is 68 58 82",
+        "masked": "My phone number is {{PHONE_NUMBER}}",
+        "spans": [
+            {
+                "entity_type": "PHONE_NUMBER",
+                "entity_value": "68 58 82",
+                "start_position": 19,
+                "end_position": 27,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 4,
+        "metadata": null
+    },
+    {
+        "full_text": "Tell me something you know about this fingerprint SHA256:75:55:FA:89:7A:78:F0:D7:7E:5F:27:0D:ED:85:A0:1C",
+        "masked": "Tell me something you know about this fingerprint {{BIOMEDICAL}}",
+        "spans": [
+            {
+                "entity_type": "BIOMEDICAL",
+                "entity_value": "SHA256:75:55:FA:89:7A:78:F0:D7:7E:5F:27:0D:ED:85:A0:1C",
+                "start_position": 50,
+                "end_position": 104,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 8,
+        "metadata": null
+    },
+    {
+        "full_text": "I need more information about this address 38240 San Andrés 54\n Apt. 678\n Olmedo de Camaces\n Spain 95236",
+        "masked": "I need more information about this address {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "38240 San Andrés 54\n Apt. 678\n Olmedo de Camaces\n Spain 95236",
+                "start_position": 43,
+                "end_position": 104,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 2,
+        "metadata": null
+    },
+    {
+        "full_text": "Tell me something you know about this fingerprint SHA256:EA:02:DD:4B:5A:4A:88:6F:11:9F:97:30:C9:8E:4C:B7",
+        "masked": "Tell me something you know about this fingerprint {{BIOMEDICAL}}",
+        "spans": [
+            {
+                "entity_type": "BIOMEDICAL",
+                "entity_value": "SHA256:EA:02:DD:4B:5A:4A:88:6F:11:9F:97:30:C9:8E:4C:B7",
+                "start_position": 50,
+                "end_position": 104,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 8,
+        "metadata": null
+    },
+    {
+        "full_text": "I was born in Cyprus (Greek)",
+        "masked": "I was born in {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "Cyprus (Greek)",
+                "start_position": 14,
+                "end_position": 28,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 3,
+        "metadata": null
+    },
+    {
+        "full_text": "My date of birth is 3/6/1955",
+        "masked": "My date of birth is {{DATE_TIME}}",
+        "spans": [
+            {
+                "entity_type": "DATE_TIME",
+                "entity_value": "3/6/1955",
+                "start_position": 20,
+                "end_position": 28,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 1,
+        "metadata": null
+    },
+    {
+        "full_text": "Tell me something you know about this fingerprint SHA256:80:3A:24:2E:94:C8:F0:A1:D7:AD:49:3F:6E:83:81:36",
+        "masked": "Tell me something you know about this fingerprint {{BIOMEDICAL}}",
+        "spans": [
+            {
+                "entity_type": "BIOMEDICAL",
+                "entity_value": "SHA256:80:3A:24:2E:94:C8:F0:A1:D7:AD:49:3F:6E:83:81:36",
+                "start_position": 50,
+                "end_position": 104,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 8,
+        "metadata": null
+    },
+    {
+        "full_text": "I was born in Cyprus (Greek)",
+        "masked": "I was born in {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "Cyprus (Greek)",
+                "start_position": 14,
+                "end_position": 28,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 3,
+        "metadata": null
+    },
+    {
+        "full_text": "I need more information about this address 694 Ebbevegen 92 Apt. 995 ÅLESUND Norway",
+        "masked": "I need more information about this address {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "694 Ebbevegen 92 Apt. 995 ÅLESUND Norway",
+                "start_position": 43,
+                "end_position": 83,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 2,
+        "metadata": null
+    },
+    {
+        "full_text": "I need more information about this address 6196 Rua Rio Prado 1721 Suite 966 Candeias Brazil",
+        "masked": "I need more information about this address {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "6196 Rua Rio Prado 1721 Suite 966 Candeias Brazil",
+                "start_position": 43,
+                "end_position": 92,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 2,
+        "metadata": null
+    },
+    {
+        "full_text": "Send the transaction to this GB06RGBI46719336454746",
+        "masked": "Send the transaction to this {{IBAN_CODE}}",
+        "spans": [
+            {
+                "entity_type": "IBAN_CODE",
+                "entity_value": "GB06RGBI46719336454746",
+                "start_position": 29,
+                "end_position": 51,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 7,
+        "metadata": null
+    },
+    {
+        "full_text": "My phone number is (21) 8228-5412",
+        "masked": "My phone number is {{PHONE_NUMBER}}",
+        "spans": [
+            {
+                "entity_type": "PHONE_NUMBER",
+                "entity_value": "(21) 8228-5412",
+                "start_position": 19,
+                "end_position": 33,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 4,
+        "metadata": null
+    },
+    {
+        "full_text": "My phone number is 06-94749986",
+        "masked": "My phone number is {{PHONE_NUMBER}}",
+        "spans": [
+            {
+                "entity_type": "PHONE_NUMBER",
+                "entity_value": "06-94749986",
+                "start_position": 19,
+                "end_position": 30,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 4,
+        "metadata": null
+    },
+    {
+        "full_text": "I need more information about this address 52270 Vikarna 12 Apt. 328 Suite 019, Keflavík, Iceland 49884",
+        "masked": "I need more information about this address {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "52270 Vikarna 12 Apt. 328 Suite 019, Keflavík, Iceland 49884",
+                "start_position": 43,
+                "end_position": 103,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 2,
+        "metadata": null
+    },
+    {
+        "full_text": "I work with Giovanni Pisano",
+        "masked": "I work with {{PERSON}}",
+        "spans": [
+            {
+                "entity_type": "PERSON",
+                "entity_value": "Giovanni Pisano",
+                "start_position": 12,
+                "end_position": 27,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 0,
+        "metadata": null
+    },
+    {
+        "full_text": "Tell me something you know about this fingerprint SHA256:7C:B0:86:17:58:08:83:3A:C0:DD:B5:8D:A2:A9:B4:D6",
+        "masked": "Tell me something you know about this fingerprint {{BIOMEDICAL}}",
+        "spans": [
+            {
+                "entity_type": "BIOMEDICAL",
+                "entity_value": "SHA256:7C:B0:86:17:58:08:83:3A:C0:DD:B5:8D:A2:A9:B4:D6",
+                "start_position": 50,
+                "end_position": 104,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 8,
+        "metadata": null
+    },
+    {
+        "full_text": "Use this card number 3573001301220900 to pay for it",
+        "masked": "Use this card number {{CREDIT_CARD}} to pay for it",
+        "spans": [
+            {
+                "entity_type": "CREDIT_CARD",
+                "entity_value": "3573001301220900",
+                "start_position": 21,
+                "end_position": 37,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 6,
+        "metadata": null
+    },
+    {
+        "full_text": "Tell me something you know about this fingerprint SHA256:28:73:C8:4D:E4:8B:74:81:0A:61:E6:9A:86:8C:E3:EC",
+        "masked": "Tell me something you know about this fingerprint {{BIOMEDICAL}}",
+        "spans": [
+            {
+                "entity_type": "BIOMEDICAL",
+                "entity_value": "SHA256:28:73:C8:4D:E4:8B:74:81:0A:61:E6:9A:86:8C:E3:EC",
+                "start_position": 50,
+                "end_position": 104,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 8,
+        "metadata": null
+    },
+    {
+        "full_text": "Contact me at CostanteMarcelo@armyspy.com for more information",
+        "masked": "Contact me at {{EMAIL_ADDRESS}} for more information",
+        "spans": [
+            {
+                "entity_type": "EMAIL_ADDRESS",
+                "entity_value": "CostanteMarcelo@armyspy.com",
+                "start_position": 14,
+                "end_position": 41,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 5,
+        "metadata": null
+    },
+    {
+        "full_text": "My date of birth is 5/26/1940",
+        "masked": "My date of birth is {{DATE_TIME}}",
+        "spans": [
+            {
+                "entity_type": "DATE_TIME",
+                "entity_value": "5/26/1940",
+                "start_position": 20,
+                "end_position": 29,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 1,
+        "metadata": null
+    },
+    {
+        "full_text": "Contact me at NedimHutinovic@cuvox.de for more information",
+        "masked": "Contact me at {{EMAIL_ADDRESS}} for more information",
+        "spans": [
+            {
+                "entity_type": "EMAIL_ADDRESS",
+                "entity_value": "NedimHutinovic@cuvox.de",
+                "start_position": 14,
+                "end_position": 37,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 5,
+        "metadata": null
+    },
+    {
+        "full_text": "My date of birth is 3/13/1961",
+        "masked": "My date of birth is {{DATE_TIME}}",
+        "spans": [
+            {
+                "entity_type": "DATE_TIME",
+                "entity_value": "3/13/1961",
+                "start_position": 20,
+                "end_position": 29,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 1,
+        "metadata": null
+    },
+    {
+        "full_text": "My phone number is (21) 4893-6624",
+        "masked": "My phone number is {{PHONE_NUMBER}}",
+        "spans": [
+            {
+                "entity_type": "PHONE_NUMBER",
+                "entity_value": "(21) 4893-6624",
+                "start_position": 19,
+                "end_position": 33,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 4,
+        "metadata": null
+    },
+    {
+        "full_text": "Send the transaction to this GB83QZFX80835532674988",
+        "masked": "Send the transaction to this {{IBAN_CODE}}",
+        "spans": [
+            {
+                "entity_type": "IBAN_CODE",
+                "entity_value": "GB83QZFX80835532674988",
+                "start_position": 29,
+                "end_position": 51,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 7,
+        "metadata": null
+    },
+    {
+        "full_text": "I was born in Hungary",
+        "masked": "I was born in {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "Hungary",
+                "start_position": 14,
+                "end_position": 21,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 3,
+        "metadata": null
+    },
+    {
+        "full_text": "My phone number is 06-35710123",
+        "masked": "My phone number is {{PHONE_NUMBER}}",
+        "spans": [
+            {
+                "entity_type": "PHONE_NUMBER",
+                "entity_value": "06-35710123",
+                "start_position": 19,
+                "end_position": 30,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 4,
+        "metadata": null
+    },
+    {
+        "full_text": "I need more information about this address 52942 Parmova 109 Apt. 674\nWAUCHOPE\n, NSW\n Australia 23906",
+        "masked": "I need more information about this address {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "52942 Parmova 109 Apt. 674\nWAUCHOPE\n, NSW\n Australia 23906",
+                "start_position": 43,
+                "end_position": 101,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 2,
+        "metadata": null
+    },
+    {
+        "full_text": "Use this card number 3500943863710422 to pay for it",
+        "masked": "Use this card number {{CREDIT_CARD}} to pay for it",
+        "spans": [
+            {
+                "entity_type": "CREDIT_CARD",
+                "entity_value": "3500943863710422",
+                "start_position": 21,
+                "end_position": 37,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 6,
+        "metadata": null
+    },
+    {
+        "full_text": "My date of birth is 1/7/1986",
+        "masked": "My date of birth is {{DATE_TIME}}",
+        "spans": [
+            {
+                "entity_type": "DATE_TIME",
+                "entity_value": "1/7/1986",
+                "start_position": 20,
+                "end_position": 28,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 1,
+        "metadata": null
+    },
+    {
+        "full_text": "I work with Eetu Hauta-aho",
+        "masked": "I work with {{PERSON}}",
+        "spans": [
+            {
+                "entity_type": "PERSON",
+                "entity_value": "Eetu Hauta-aho",
+                "start_position": 12,
+                "end_position": 26,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 0,
+        "metadata": null
+    },
+    {
+        "full_text": "I need more information about this address 78263 53 Rue Talleyrand Apt. 125 Sidi Ahmed Zarrouk Governorate Gafsa",
+        "masked": "I need more information about this address {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "78263 53 Rue Talleyrand Apt. 125 Sidi Ahmed Zarrouk Governorate Gafsa",
+                "start_position": 43,
+                "end_position": 112,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 2,
+        "metadata": null
+    },
+    {
+        "full_text": "I need more information about this address 4202 Spojovací 876 Apt. 251 Trebelovice VY",
+        "masked": "I need more information about this address {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "4202 Spojovací 876 Apt. 251 Trebelovice VY",
+                "start_position": 43,
+                "end_position": 85,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 2,
+        "metadata": null
+    },
+    {
+        "full_text": "My date of birth is 1/26/1981",
+        "masked": "My date of birth is {{DATE_TIME}}",
+        "spans": [
+            {
+                "entity_type": "DATE_TIME",
+                "entity_value": "1/26/1981",
+                "start_position": 20,
+                "end_position": 29,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 1,
+        "metadata": null
+    },
+    {
+        "full_text": "My date of birth is 3/7/1987",
+        "masked": "My date of birth is {{DATE_TIME}}",
+        "spans": [
+            {
+                "entity_type": "DATE_TIME",
+                "entity_value": "3/7/1987",
+                "start_position": 20,
+                "end_position": 28,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 1,
+        "metadata": null
+    },
+    {
+        "full_text": "Send the transaction to this GB63KGID31492246506864",
+        "masked": "Send the transaction to this {{IBAN_CODE}}",
+        "spans": [
+            {
+                "entity_type": "IBAN_CODE",
+                "entity_value": "GB63KGID31492246506864",
+                "start_position": 29,
+                "end_position": 51,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 7,
+        "metadata": null
+    },
+    {
+        "full_text": "I work with Jacob L Woollacott",
+        "masked": "I work with {{PERSON}}",
+        "spans": [
+            {
+                "entity_type": "PERSON",
+                "entity_value": "Jacob L Woollacott",
+                "start_position": 12,
+                "end_position": 30,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 0,
+        "metadata": null
+    },
+    {
+        "full_text": "My date of birth is 1/26/1974",
+        "masked": "My date of birth is {{DATE_TIME}}",
+        "spans": [
+            {
+                "entity_type": "DATE_TIME",
+                "entity_value": "1/26/1974",
+                "start_position": 20,
+                "end_position": 29,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 1,
+        "metadata": null
+    },
+    {
+        "full_text": "Tell me something you know about this fingerprint SHA256:41:E0:6C:58:0B:B7:22:FA:34:75:82:B4:03:C2:00:F1",
+        "masked": "Tell me something you know about this fingerprint {{BIOMEDICAL}}",
+        "spans": [
+            {
+                "entity_type": "BIOMEDICAL",
+                "entity_value": "SHA256:41:E0:6C:58:0B:B7:22:FA:34:75:82:B4:03:C2:00:F1",
+                "start_position": 50,
+                "end_position": 104,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 8,
+        "metadata": null
+    },
+    {
+        "full_text": "My date of birth is 2/28/1968",
+        "masked": "My date of birth is {{DATE_TIME}}",
+        "spans": [
+            {
+                "entity_type": "DATE_TIME",
+                "entity_value": "2/28/1968",
+                "start_position": 20,
+                "end_position": 29,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 1,
+        "metadata": null
+    },
+    {
+        "full_text": "I work with Jean V Rodriguez",
+        "masked": "I work with {{PERSON}}",
+        "spans": [
+            {
+                "entity_type": "PERSON",
+                "entity_value": "Jean V Rodriguez",
+                "start_position": 12,
+                "end_position": 28,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 0,
+        "metadata": null
+    },
+    {
+        "full_text": "Use this card number 4820929964806863 to pay for it",
+        "masked": "Use this card number {{CREDIT_CARD}} to pay for it",
+        "spans": [
+            {
+                "entity_type": "CREDIT_CARD",
+                "entity_value": "4820929964806863",
+                "start_position": 21,
+                "end_position": 37,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 6,
+        "metadata": null
+    },
+    {
+        "full_text": "I need more information about this address 35045 Άγιος Γεώργιος 187, Cite Essanaouber, Tunisia",
+        "masked": "I need more information about this address {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "35045 Άγιος Γεώργιος 187, Cite Essanaouber, Tunisia",
+                "start_position": 43,
+                "end_position": 94,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 2,
+        "metadata": null
+    },
+    {
+        "full_text": "I need more information about this address 28538 130 Rue de Halo Eloued Apt. 127 Apt. 860, Reykjavík, Iceland 30026",
+        "masked": "I need more information about this address {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "28538 130 Rue de Halo Eloued Apt. 127 Apt. 860, Reykjavík, Iceland 30026",
+                "start_position": 43,
+                "end_position": 115,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 2,
+        "metadata": null
+    },
+    {
+        "full_text": "Use this card number 373521887863797 to pay for it",
+        "masked": "Use this card number {{CREDIT_CARD}} to pay for it",
+        "spans": [
+            {
+                "entity_type": "CREDIT_CARD",
+                "entity_value": "373521887863797",
+                "start_position": 21,
+                "end_position": 36,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 6,
+        "metadata": null
+    },
+    {
+        "full_text": "Send the transaction to this GB39VTBE21997520818627",
+        "masked": "Send the transaction to this {{IBAN_CODE}}",
+        "spans": [
+            {
+                "entity_type": "IBAN_CODE",
+                "entity_value": "GB39VTBE21997520818627",
+                "start_position": 29,
+                "end_position": 51,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 7,
+        "metadata": null
+    },
+    {
+        "full_text": "My date of birth is 10/20/1945",
+        "masked": "My date of birth is {{DATE_TIME}}",
+        "spans": [
+            {
+                "entity_type": "DATE_TIME",
+                "entity_value": "10/20/1945",
+                "start_position": 20,
+                "end_position": 30,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 1,
+        "metadata": null
+    },
+    {
+        "full_text": "Send the transaction to this GB09MGLF53720865284826",
+        "masked": "Send the transaction to this {{IBAN_CODE}}",
+        "spans": [
+            {
+                "entity_type": "IBAN_CODE",
+                "entity_value": "GB09MGLF53720865284826",
+                "start_position": 29,
+                "end_position": 51,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 7,
+        "metadata": null
+    },
+    {
+        "full_text": "Tell me something you know about this fingerprint SHA256:C3:B4:E3:81:18:B8:CD:9C:86:48:B4:D6:64:51:B7:C6",
+        "masked": "Tell me something you know about this fingerprint {{BIOMEDICAL}}",
+        "spans": [
+            {
+                "entity_type": "BIOMEDICAL",
+                "entity_value": "SHA256:C3:B4:E3:81:18:B8:CD:9C:86:48:B4:D6:64:51:B7:C6",
+                "start_position": 50,
+                "end_position": 104,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 8,
+        "metadata": null
+    },
+    {
+        "full_text": "Contact me at MunehikoSatou@cuvox.de for more information",
+        "masked": "Contact me at {{EMAIL_ADDRESS}} for more information",
+        "spans": [
+            {
+                "entity_type": "EMAIL_ADDRESS",
+                "entity_value": "MunehikoSatou@cuvox.de",
+                "start_position": 14,
+                "end_position": 36,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 5,
+        "metadata": null
+    },
+    {
+        "full_text": "I was born in Denmark",
+        "masked": "I was born in {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "Denmark",
+                "start_position": 14,
+                "end_position": 21,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 3,
+        "metadata": null
+    },
+    {
+        "full_text": "My phone number is 75 401 456",
+        "masked": "My phone number is {{PHONE_NUMBER}}",
+        "spans": [
+            {
+                "entity_type": "PHONE_NUMBER",
+                "entity_value": "75 401 456",
+                "start_position": 19,
+                "end_position": 29,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 4,
+        "metadata": null
+    },
+    {
+        "full_text": "Tell me something you know about this fingerprint SHA256:F2:81:B1:16:80:22:22:E8:AF:10:5C:C8:21:19:92:AE",
+        "masked": "Tell me something you know about this fingerprint {{BIOMEDICAL}}",
+        "spans": [
+            {
+                "entity_type": "BIOMEDICAL",
+                "entity_value": "SHA256:F2:81:B1:16:80:22:22:E8:AF:10:5C:C8:21:19:92:AE",
+                "start_position": 50,
+                "end_position": 104,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 8,
+        "metadata": null
+    },
+    {
+        "full_text": "I was born in Norway",
+        "masked": "I was born in {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "Norway",
+                "start_position": 14,
+                "end_position": 20,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 3,
+        "metadata": null
+    },
+    {
+        "full_text": "I was born in Czech Republic",
+        "masked": "I was born in {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "Czech Republic",
+                "start_position": 14,
+                "end_position": 28,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 3,
+        "metadata": null
+    },
+    {
+        "full_text": "Tell me something you know about this fingerprint SHA256:10:E9:40:38:86:C1:7F:01:6B:B7:D3:3D:9F:D9:EB:3A",
+        "masked": "Tell me something you know about this fingerprint {{BIOMEDICAL}}",
+        "spans": [
+            {
+                "entity_type": "BIOMEDICAL",
+                "entity_value": "SHA256:10:E9:40:38:86:C1:7F:01:6B:B7:D3:3D:9F:D9:EB:3A",
+                "start_position": 50,
+                "end_position": 104,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 8,
+        "metadata": null
+    },
+    {
+        "full_text": "I work with Immacolata Marchesi",
+        "masked": "I work with {{PERSON}}",
+        "spans": [
+            {
+                "entity_type": "PERSON",
+                "entity_value": "Immacolata Marchesi",
+                "start_position": 12,
+                "end_position": 31,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 0,
+        "metadata": null
+    },
+    {
+        "full_text": "My phone number is 70 361 207",
+        "masked": "My phone number is {{PHONE_NUMBER}}",
+        "spans": [
+            {
+                "entity_type": "PHONE_NUMBER",
+                "entity_value": "70 361 207",
+                "start_position": 19,
+                "end_position": 29,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 4,
+        "metadata": null
+    },
+    {
+        "full_text": "I work with Moustafa Mellink",
+        "masked": "I work with {{PERSON}}",
+        "spans": [
+            {
+                "entity_type": "PERSON",
+                "entity_value": "Moustafa Mellink",
+                "start_position": 12,
+                "end_position": 28,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 0,
+        "metadata": null
+    },
+    {
+        "full_text": "I work with Jónheiður Skúladóttir",
+        "masked": "I work with {{PERSON}}",
+        "spans": [
+            {
+                "entity_type": "PERSON",
+                "entity_value": "Jónheiður Skúladóttir",
+                "start_position": 12,
+                "end_position": 33,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 0,
+        "metadata": null
+    },
+    {
+        "full_text": "Use this card number 374400792314791 to pay for it",
+        "masked": "Use this card number {{CREDIT_CARD}} to pay for it",
+        "spans": [
+            {
+                "entity_type": "CREDIT_CARD",
+                "entity_value": "374400792314791",
+                "start_position": 21,
+                "end_position": 36,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 6,
+        "metadata": null
+    },
+    {
+        "full_text": "I work with Josef Matuška",
+        "masked": "I work with {{PERSON}}",
+        "spans": [
+            {
+                "entity_type": "PERSON",
+                "entity_value": "Josef Matuška",
+                "start_position": 12,
+                "end_position": 25,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 0,
+        "metadata": null
+    },
+    {
+        "full_text": "My phone number is 72 420 011",
+        "masked": "My phone number is {{PHONE_NUMBER}}",
+        "spans": [
+            {
+                "entity_type": "PHONE_NUMBER",
+                "entity_value": "72 420 011",
+                "start_position": 19,
+                "end_position": 29,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 4,
+        "metadata": null
+    },
+    {
+        "full_text": "Tell me something you know about this fingerprint SHA256:5E:80:D5:DF:BB:F5:BC:27:07:E9:42:BA:50:E1:B3:AC",
+        "masked": "Tell me something you know about this fingerprint {{BIOMEDICAL}}",
+        "spans": [
+            {
+                "entity_type": "BIOMEDICAL",
+                "entity_value": "SHA256:5E:80:D5:DF:BB:F5:BC:27:07:E9:42:BA:50:E1:B3:AC",
+                "start_position": 50,
+                "end_position": 104,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 8,
+        "metadata": null
+    },
+    {
+        "full_text": "My date of birth is 8/14/1977",
+        "masked": "My date of birth is {{DATE_TIME}}",
+        "spans": [
+            {
+                "entity_type": "DATE_TIME",
+                "entity_value": "8/14/1977",
+                "start_position": 20,
+                "end_position": 29,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 1,
+        "metadata": null
+    },
+    {
+        "full_text": "Use this card number 4015161350511338 to pay for it",
+        "masked": "Use this card number {{CREDIT_CARD}} to pay for it",
+        "spans": [
+            {
+                "entity_type": "CREDIT_CARD",
+                "entity_value": "4015161350511338",
+                "start_position": 21,
+                "end_position": 37,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 6,
+        "metadata": null
+    },
+    {
+        "full_text": "I work with Witołd Nowak ",
+        "masked": "I work with {{PERSON}}",
+        "spans": [
+            {
+                "entity_type": "PERSON",
+                "entity_value": "Witołd Nowak ",
+                "start_position": 12,
+                "end_position": 25,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 0,
+        "metadata": null
+    },
+    {
+        "full_text": "My phone number is 09122 12 60 01",
+        "masked": "My phone number is {{PHONE_NUMBER}}",
+        "spans": [
+            {
+                "entity_type": "PHONE_NUMBER",
+                "entity_value": "09122 12 60 01",
+                "start_position": 19,
+                "end_position": 33,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 4,
+        "metadata": null
+    },
+    {
+        "full_text": "Tell me something you know about this fingerprint SHA256:65:8D:45:4F:27:2B:49:01:55:BD:1D:0D:74:D8:7B:80",
+        "masked": "Tell me something you know about this fingerprint {{BIOMEDICAL}}",
+        "spans": [
+            {
+                "entity_type": "BIOMEDICAL",
+                "entity_value": "SHA256:65:8D:45:4F:27:2B:49:01:55:BD:1D:0D:74:D8:7B:80",
+                "start_position": 50,
+                "end_position": 104,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 8,
+        "metadata": null
+    },
+    {
+        "full_text": "I need more information about this address 5372 52 rue du Faubourg National Apt. 971 TALENCE AQ",
+        "masked": "I need more information about this address {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "5372 52 rue du Faubourg National Apt. 971 TALENCE AQ",
+                "start_position": 43,
+                "end_position": 95,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 2,
+        "metadata": null
+    },
+    {
+        "full_text": "My phone number is 418-218-7751",
+        "masked": "My phone number is {{PHONE_NUMBER}}",
+        "spans": [
+            {
+                "entity_type": "PHONE_NUMBER",
+                "entity_value": "418-218-7751",
+                "start_position": 19,
+                "end_position": 31,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 4,
+        "metadata": null
+    },
+    {
+        "full_text": "My phone number is 0380 2472174",
+        "masked": "My phone number is {{PHONE_NUMBER}}",
+        "spans": [
+            {
+                "entity_type": "PHONE_NUMBER",
+                "entity_value": "0380 2472174",
+                "start_position": 19,
+                "end_position": 31,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 4,
+        "metadata": null
+    },
+    {
+        "full_text": "My phone number is 0612-4604859",
+        "masked": "My phone number is {{PHONE_NUMBER}}",
+        "spans": [
+            {
+                "entity_type": "PHONE_NUMBER",
+                "entity_value": "0612-4604859",
+                "start_position": 19,
+                "end_position": 31,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 4,
+        "metadata": null
+    },
+    {
+        "full_text": "My phone number is 040 41 85 61",
+        "masked": "My phone number is {{PHONE_NUMBER}}",
+        "spans": [
+            {
+                "entity_type": "PHONE_NUMBER",
+                "entity_value": "040 41 85 61",
+                "start_position": 19,
+                "end_position": 31,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 4,
+        "metadata": null
+    },
+    {
+        "full_text": "Use this card number 377988197566566 to pay for it",
+        "masked": "Use this card number {{CREDIT_CARD}} to pay for it",
+        "spans": [
+            {
+                "entity_type": "CREDIT_CARD",
+                "entity_value": "377988197566566",
+                "start_position": 21,
+                "end_position": 36,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 6,
+        "metadata": null
+    },
+    {
+        "full_text": "Send the transaction to this GB44GCSA06816088127667",
+        "masked": "Send the transaction to this {{IBAN_CODE}}",
+        "spans": [
+            {
+                "entity_type": "IBAN_CODE",
+                "entity_value": "GB44GCSA06816088127667",
+                "start_position": 29,
+                "end_position": 51,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 7,
+        "metadata": null
+    },
+    {
+        "full_text": "Contact me at SjanneBeverdam@einrot.com for more information",
+        "masked": "Contact me at {{EMAIL_ADDRESS}} for more information",
+        "spans": [
+            {
+                "entity_type": "EMAIL_ADDRESS",
+                "entity_value": "SjanneBeverdam@einrot.com",
+                "start_position": 14,
+                "end_position": 39,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 5,
+        "metadata": null
+    },
+    {
+        "full_text": "I need more information about this address 52259 Hõbepaju 86 Suite 336, Vyskytná nad Jihlavou, Czech Republic",
+        "masked": "I need more information about this address {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "52259 Hõbepaju 86 Suite 336, Vyskytná nad Jihlavou, Czech Republic",
+                "start_position": 43,
+                "end_position": 109,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 2,
+        "metadata": null
+    },
+    {
+        "full_text": "My phone number is 724 008 048",
+        "masked": "My phone number is {{PHONE_NUMBER}}",
+        "spans": [
+            {
+                "entity_type": "PHONE_NUMBER",
+                "entity_value": "724 008 048",
+                "start_position": 19,
+                "end_position": 30,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 4,
+        "metadata": null
+    },
+    {
+        "full_text": "I work with Naomi Ryan",
+        "masked": "I work with {{PERSON}}",
+        "spans": [
+            {
+                "entity_type": "PERSON",
+                "entity_value": "Naomi Ryan",
+                "start_position": 12,
+                "end_position": 22,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 0,
+        "metadata": null
+    },
+    {
+        "full_text": "I was born in Austria",
+        "masked": "I was born in {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "Austria",
+                "start_position": 14,
+                "end_position": 21,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 3,
+        "metadata": null
+    },
+    {
+        "full_text": "Use this card number 30207378877299 to pay for it",
+        "masked": "Use this card number {{CREDIT_CARD}} to pay for it",
+        "spans": [
+            {
+                "entity_type": "CREDIT_CARD",
+                "entity_value": "30207378877299",
+                "start_position": 21,
+                "end_position": 35,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 6,
+        "metadata": null
+    },
+    {
+        "full_text": "My phone number is 051-927-827",
+        "masked": "My phone number is {{PHONE_NUMBER}}",
+        "spans": [
+            {
+                "entity_type": "PHONE_NUMBER",
+                "entity_value": "051-927-827",
+                "start_position": 19,
+                "end_position": 30,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 4,
+        "metadata": null
+    },
+    {
+        "full_text": "I need more information about this address the corner of Fitjabraut 87 and Julian Square",
+        "masked": "I need more information about this address {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "the corner of Fitjabraut 87 and Julian Square",
+                "start_position": 43,
+                "end_position": 88,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 2,
+        "metadata": null
+    },
+    {
+        "full_text": "Send the transaction to this GB05BJKW51858067172927",
+        "masked": "Send the transaction to this {{IBAN_CODE}}",
+        "spans": [
+            {
+                "entity_type": "IBAN_CODE",
+                "entity_value": "GB05BJKW51858067172927",
+                "start_position": 29,
+                "end_position": 51,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 7,
+        "metadata": null
+    },
+    {
+        "full_text": "My phone number is (021) 6230-408",
+        "masked": "My phone number is {{PHONE_NUMBER}}",
+        "spans": [
+            {
+                "entity_type": "PHONE_NUMBER",
+                "entity_value": "(021) 6230-408",
+                "start_position": 19,
+                "end_position": 33,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 4,
+        "metadata": null
+    },
+    {
+        "full_text": "I was born in Norway",
+        "masked": "I was born in {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "Norway",
+                "start_position": 14,
+                "end_position": 20,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 3,
+        "metadata": null
+    },
+    {
+        "full_text": "Tell me something you know about this fingerprint SHA256:93:A5:A1:F3:54:E7:39:7A:28:C0:BD:57:20:AC:3A:80",
+        "masked": "Tell me something you know about this fingerprint {{BIOMEDICAL}}",
+        "spans": [
+            {
+                "entity_type": "BIOMEDICAL",
+                "entity_value": "SHA256:93:A5:A1:F3:54:E7:39:7A:28:C0:BD:57:20:AC:3A:80",
+                "start_position": 50,
+                "end_position": 104,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 8,
+        "metadata": null
+    },
+    {
+        "full_text": "Contact me at MarisaAzevedoMelo@dayrep.com for more information",
+        "masked": "Contact me at {{EMAIL_ADDRESS}} for more information",
+        "spans": [
+            {
+                "entity_type": "EMAIL_ADDRESS",
+                "entity_value": "MarisaAzevedoMelo@dayrep.com",
+                "start_position": 14,
+                "end_position": 42,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 5,
+        "metadata": null
+    },
+    {
+        "full_text": "My phone number is 06-20799459",
+        "masked": "My phone number is {{PHONE_NUMBER}}",
+        "spans": [
+            {
+                "entity_type": "PHONE_NUMBER",
+                "entity_value": "06-20799459",
+                "start_position": 19,
+                "end_position": 30,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 4,
+        "metadata": null
+    },
+    {
+        "full_text": "I was born in Spain",
+        "masked": "I was born in {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "Spain",
+                "start_position": 14,
+                "end_position": 19,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 3,
+        "metadata": null
+    },
+    {
+        "full_text": "My date of birth is 3/23/1983",
+        "masked": "My date of birth is {{DATE_TIME}}",
+        "spans": [
+            {
+                "entity_type": "DATE_TIME",
+                "entity_value": "3/23/1983",
+                "start_position": 20,
+                "end_position": 29,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 1,
+        "metadata": null
+    },
+    {
+        "full_text": "I was born in Italy",
+        "masked": "I was born in {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "Italy",
+                "start_position": 14,
+                "end_position": 19,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 3,
+        "metadata": null
+    },
+    {
+        "full_text": "I need more information about this address 5680 Pod Strání 10 Apt. 077 Dolní Dvur Královéhradecký kraj",
+        "masked": "I need more information about this address {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "5680 Pod Strání 10 Apt. 077 Dolní Dvur Královéhradecký kraj",
+                "start_position": 43,
+                "end_position": 102,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 2,
+        "metadata": null
+    },
+    {
+        "full_text": "I work with Elizabeth Barff",
+        "masked": "I work with {{PERSON}}",
+        "spans": [
+            {
+                "entity_type": "PERSON",
+                "entity_value": "Elizabeth Barff",
+                "start_position": 12,
+                "end_position": 27,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 0,
+        "metadata": null
+    },
+    {
+        "full_text": "Use this card number 4347756323334350 to pay for it",
+        "masked": "Use this card number {{CREDIT_CARD}} to pay for it",
+        "spans": [
+            {
+                "entity_type": "CREDIT_CARD",
+                "entity_value": "4347756323334350",
+                "start_position": 21,
+                "end_position": 37,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 6,
+        "metadata": null
+    },
+    {
+        "full_text": "My date of birth is 7/30/1962",
+        "masked": "My date of birth is {{DATE_TIME}}",
+        "spans": [
+            {
+                "entity_type": "DATE_TIME",
+                "entity_value": "7/30/1962",
+                "start_position": 20,
+                "end_position": 29,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 1,
+        "metadata": null
+    },
+    {
+        "full_text": "My date of birth is 4/16/1958",
+        "masked": "My date of birth is {{DATE_TIME}}",
+        "spans": [
+            {
+                "entity_type": "DATE_TIME",
+                "entity_value": "4/16/1958",
+                "start_position": 20,
+                "end_position": 29,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 1,
+        "metadata": null
+    },
+    {
+        "full_text": "Send the transaction to this GB13HXAC09220546680860",
+        "masked": "Send the transaction to this {{IBAN_CODE}}",
+        "spans": [
+            {
+                "entity_type": "IBAN_CODE",
+                "entity_value": "GB13HXAC09220546680860",
+                "start_position": 29,
+                "end_position": 51,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 7,
+        "metadata": null
+    },
+    {
+        "full_text": "Use this card number 30442361269598 to pay for it",
+        "masked": "Use this card number {{CREDIT_CARD}} to pay for it",
+        "spans": [
+            {
+                "entity_type": "CREDIT_CARD",
+                "entity_value": "30442361269598",
+                "start_position": 21,
+                "end_position": 35,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 6,
+        "metadata": null
+    },
+    {
+        "full_text": "I need more information about this address 38024 Schaarsteinweg 97 Apt. 138\nGLAUBENDORF, NO 72072",
+        "masked": "I need more information about this address {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "38024 Schaarsteinweg 97 Apt. 138\nGLAUBENDORF, NO 72072",
+                "start_position": 43,
+                "end_position": 97,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 2,
+        "metadata": null
+    },
+    {
+        "full_text": "I was born in Brazil",
+        "masked": "I was born in {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "Brazil",
+                "start_position": 14,
+                "end_position": 20,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 3,
+        "metadata": null
+    },
+    {
+        "full_text": "I work with Albina I. Pawlak",
+        "masked": "I work with {{PERSON}}",
+        "spans": [
+            {
+                "entity_type": "PERSON",
+                "entity_value": "Albina I. Pawlak",
+                "start_position": 12,
+                "end_position": 28,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 0,
+        "metadata": null
+    },
+    {
+        "full_text": "Send the transaction to this GB05DCVY03316044977825",
+        "masked": "Send the transaction to this {{IBAN_CODE}}",
+        "spans": [
+            {
+                "entity_type": "IBAN_CODE",
+                "entity_value": "GB05DCVY03316044977825",
+                "start_position": 29,
+                "end_position": 51,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 7,
+        "metadata": null
+    },
+    {
+        "full_text": "I need more information about this address PSC 5473, Box 6730\nAPO AA 35081",
+        "masked": "I need more information about this address {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "PSC 5473, Box 6730\nAPO AA 35081",
+                "start_position": 43,
+                "end_position": 74,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 2,
+        "metadata": null
+    },
+    {
+        "full_text": "I need more information about this address the corner of 167 King Alexander and Mary Wells",
+        "masked": "I need more information about this address {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "the corner of 167 King Alexander and Mary Wells",
+                "start_position": 43,
+                "end_position": 90,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 2,
+        "metadata": null
+    },
+    {
+        "full_text": "I work with Koppány C Vadász",
+        "masked": "I work with {{PERSON}}",
+        "spans": [
+            {
+                "entity_type": "PERSON",
+                "entity_value": "Koppány C Vadász",
+                "start_position": 12,
+                "end_position": 28,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 0,
+        "metadata": null
+    },
+    {
+        "full_text": "I need more information about this address Unit 2331 Box 2718\nDPO AE 83253",
+        "masked": "I need more information about this address {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "Unit 2331 Box 2718\nDPO AE 83253",
+                "start_position": 43,
+                "end_position": 74,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 2,
+        "metadata": null
+    },
+    {
+        "full_text": "Tell me something you know about this fingerprint SHA256:C9:A0:F7:3E:35:2B:D7:4F:F7:6D:9F:2F:15:6A:B7:78",
+        "masked": "Tell me something you know about this fingerprint {{BIOMEDICAL}}",
+        "spans": [
+            {
+                "entity_type": "BIOMEDICAL",
+                "entity_value": "SHA256:C9:A0:F7:3E:35:2B:D7:4F:F7:6D:9F:2F:15:6A:B7:78",
+                "start_position": 50,
+                "end_position": 104,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 8,
+        "metadata": null
+    },
+    {
+        "full_text": "Tell me something you know about this fingerprint SHA256:E1:1F:16:0A:90:23:95:D3:DE:28:41:73:27:70:05:02",
+        "masked": "Tell me something you know about this fingerprint {{BIOMEDICAL}}",
+        "spans": [
+            {
+                "entity_type": "BIOMEDICAL",
+                "entity_value": "SHA256:E1:1F:16:0A:90:23:95:D3:DE:28:41:73:27:70:05:02",
+                "start_position": 50,
+                "end_position": 104,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 8,
+        "metadata": null
+    },
+    {
+        "full_text": "I was born in Spain",
+        "masked": "I was born in {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "Spain",
+                "start_position": 14,
+                "end_position": 19,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 3,
+        "metadata": null
+    },
+    {
+        "full_text": "My phone number is 0664 350 84 34",
+        "masked": "My phone number is {{PHONE_NUMBER}}",
+        "spans": [
+            {
+                "entity_type": "PHONE_NUMBER",
+                "entity_value": "0664 350 84 34",
+                "start_position": 19,
+                "end_position": 33,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 4,
+        "metadata": null
+    },
+    {
+        "full_text": "My phone number is 790 9510",
+        "masked": "My phone number is {{PHONE_NUMBER}}",
+        "spans": [
+            {
+                "entity_type": "PHONE_NUMBER",
+                "entity_value": "790 9510",
+                "start_position": 19,
+                "end_position": 27,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 4,
+        "metadata": null
+    },
+    {
+        "full_text": "My date of birth is 7/29/1947",
+        "masked": "My date of birth is {{DATE_TIME}}",
+        "spans": [
+            {
+                "entity_type": "DATE_TIME",
+                "entity_value": "7/29/1947",
+                "start_position": 20,
+                "end_position": 29,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 1,
+        "metadata": null
+    },
+    {
+        "full_text": "Send the transaction to this GB32OMSG95187244232323",
+        "masked": "Send the transaction to this {{IBAN_CODE}}",
+        "spans": [
+            {
+                "entity_type": "IBAN_CODE",
+                "entity_value": "GB32OMSG95187244232323",
+                "start_position": 29,
+                "end_position": 51,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 7,
+        "metadata": null
+    },
+    {
+        "full_text": "I was born in United States",
+        "masked": "I was born in {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "United States",
+                "start_position": 14,
+                "end_position": 27,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 3,
+        "metadata": null
+    },
+    {
+        "full_text": "My phone number is 52-90-61-32",
+        "masked": "My phone number is {{PHONE_NUMBER}}",
+        "spans": [
+            {
+                "entity_type": "PHONE_NUMBER",
+                "entity_value": "52-90-61-32",
+                "start_position": 19,
+                "end_position": 30,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 4,
+        "metadata": null
+    },
+    {
+        "full_text": "I work with Daniel E Andreasen",
+        "masked": "I work with {{PERSON}}",
+        "spans": [
+            {
+                "entity_type": "PERSON",
+                "entity_value": "Daniel E Andreasen",
+                "start_position": 12,
+                "end_position": 30,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 0,
+        "metadata": null
+    },
+    {
+        "full_text": "I work with Liva M. Lorenzen",
+        "masked": "I work with {{PERSON}}",
+        "spans": [
+            {
+                "entity_type": "PERSON",
+                "entity_value": "Liva M. Lorenzen",
+                "start_position": 12,
+                "end_position": 28,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 0,
+        "metadata": null
+    },
+    {
+        "full_text": "I need more information about this address 661 Joaquin Suarez 4740\nNEWBOROUGH\n, nan\n United Kingdom 75134",
+        "masked": "I need more information about this address {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "661 Joaquin Suarez 4740\nNEWBOROUGH\n, nan\n United Kingdom 75134",
+                "start_position": 43,
+                "end_position": 105,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 2,
+        "metadata": null
+    },
+    {
+        "full_text": "I work with Kinya Shikikawa",
+        "masked": "I work with {{PERSON}}",
+        "spans": [
+            {
+                "entity_type": "PERSON",
+                "entity_value": "Kinya Shikikawa",
+                "start_position": 12,
+                "end_position": 27,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 0,
+        "metadata": null
+    },
+    {
+        "full_text": "Contact me at AlmaSThygesen@armyspy.com for more information",
+        "masked": "Contact me at {{EMAIL_ADDRESS}} for more information",
+        "spans": [
+            {
+                "entity_type": "EMAIL_ADDRESS",
+                "entity_value": "AlmaSThygesen@armyspy.com",
+                "start_position": 14,
+                "end_position": 39,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 5,
+        "metadata": null
+    },
+    {
+        "full_text": "I was born in Norway",
+        "masked": "I was born in {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "Norway",
+                "start_position": 14,
+                "end_position": 20,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 3,
+        "metadata": null
+    },
+    {
+        "full_text": "I work with Rościsław Dudek",
+        "masked": "I work with {{PERSON}}",
+        "spans": [
+            {
+                "entity_type": "PERSON",
+                "entity_value": "Rościsław Dudek",
+                "start_position": 12,
+                "end_position": 27,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 0,
+        "metadata": null
+    },
+    {
+        "full_text": "I need more information about this address 054 Höhenweg 108\nROVANIEMI, LL 26083",
+        "masked": "I need more information about this address {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "054 Höhenweg 108\nROVANIEMI, LL 26083",
+                "start_position": 43,
+                "end_position": 79,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 2,
+        "metadata": null
+    },
+    {
+        "full_text": "Contact me at THorbergurSumarlidason@fleckens.hu for more information",
+        "masked": "Contact me at {{EMAIL_ADDRESS}} for more information",
+        "spans": [
+            {
+                "entity_type": "EMAIL_ADDRESS",
+                "entity_value": "THorbergurSumarlidason@fleckens.hu",
+                "start_position": 14,
+                "end_position": 48,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 5,
+        "metadata": null
+    },
+    {
+        "full_text": "Use this card number 4109645771156505721 to pay for it",
+        "masked": "Use this card number {{CREDIT_CARD}} to pay for it",
+        "spans": [
+            {
+                "entity_type": "CREDIT_CARD",
+                "entity_value": "4109645771156505721",
+                "start_position": 21,
+                "end_position": 40,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 6,
+        "metadata": null
+    },
+    {
+        "full_text": "Tell me something you know about this fingerprint SHA256:9D:03:70:E7:0C:22:12:1C:DD:25:6F:F2:55:FE:C2:3C",
+        "masked": "Tell me something you know about this fingerprint {{BIOMEDICAL}}",
+        "spans": [
+            {
+                "entity_type": "BIOMEDICAL",
+                "entity_value": "SHA256:9D:03:70:E7:0C:22:12:1C:DD:25:6F:F2:55:FE:C2:3C",
+                "start_position": 50,
+                "end_position": 104,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 8,
+        "metadata": null
+    },
+    {
+        "full_text": "Use this card number 4038258169053651 to pay for it",
+        "masked": "Use this card number {{CREDIT_CARD}} to pay for it",
+        "spans": [
+            {
+                "entity_type": "CREDIT_CARD",
+                "entity_value": "4038258169053651",
+                "start_position": 21,
+                "end_position": 37,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 6,
+        "metadata": null
+    },
+    {
+        "full_text": "Send the transaction to this GB10RZDE75363090583275",
+        "masked": "Send the transaction to this {{IBAN_CODE}}",
+        "spans": [
+            {
+                "entity_type": "IBAN_CODE",
+                "entity_value": "GB10RZDE75363090583275",
+                "start_position": 29,
+                "end_position": 51,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 7,
+        "metadata": null
+    },
+    {
+        "full_text": "I work with Aston R. Lind",
+        "masked": "I work with {{PERSON}}",
+        "spans": [
+            {
+                "entity_type": "PERSON",
+                "entity_value": "Aston R. Lind",
+                "start_position": 12,
+                "end_position": 25,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 0,
+        "metadata": null
+    },
+    {
+        "full_text": "I work with Saidmagomed Umkhayev",
+        "masked": "I work with {{PERSON}}",
+        "spans": [
+            {
+                "entity_type": "PERSON",
+                "entity_value": "Saidmagomed Umkhayev",
+                "start_position": 12,
+                "end_position": 32,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 0,
+        "metadata": null
+    },
+    {
+        "full_text": "My date of birth is 7/13/1956",
+        "masked": "My date of birth is {{DATE_TIME}}",
+        "spans": [
+            {
+                "entity_type": "DATE_TIME",
+                "entity_value": "7/13/1956",
+                "start_position": 20,
+                "end_position": 29,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 1,
+        "metadata": null
+    },
+    {
+        "full_text": "I need more information about this address Unit 1325 Box 7649\nDPO AP 49046",
+        "masked": "I need more information about this address {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "Unit 1325 Box 7649\nDPO AP 49046",
+                "start_position": 43,
+                "end_position": 74,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 2,
+        "metadata": null
+    },
+    {
+        "full_text": "I work with Chiyuri Sangi",
+        "masked": "I work with {{PERSON}}",
+        "spans": [
+            {
+                "entity_type": "PERSON",
+                "entity_value": "Chiyuri Sangi",
+                "start_position": 12,
+                "end_position": 25,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 0,
+        "metadata": null
+    },
+    {
+        "full_text": "My date of birth is 9/4/1944",
+        "masked": "My date of birth is {{DATE_TIME}}",
+        "spans": [
+            {
+                "entity_type": "DATE_TIME",
+                "entity_value": "9/4/1944",
+                "start_position": 20,
+                "end_position": 28,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 1,
+        "metadata": null
+    },
+    {
+        "full_text": "I was born in Brazil",
+        "masked": "I was born in {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "Brazil",
+                "start_position": 14,
+                "end_position": 20,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 3,
+        "metadata": null
+    },
+    {
+        "full_text": "Use this card number 30494162363203 to pay for it",
+        "masked": "Use this card number {{CREDIT_CARD}} to pay for it",
+        "spans": [
+            {
+                "entity_type": "CREDIT_CARD",
+                "entity_value": "30494162363203",
+                "start_position": 21,
+                "end_position": 35,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 6,
+        "metadata": null
+    },
+    {
+        "full_text": "Tell me something you know about this fingerprint SHA256:D6:D0:A7:69:B8:28:A8:42:A1:08:EC:51:8F:14:2F:CA",
+        "masked": "Tell me something you know about this fingerprint {{BIOMEDICAL}}",
+        "spans": [
+            {
+                "entity_type": "BIOMEDICAL",
+                "entity_value": "SHA256:D6:D0:A7:69:B8:28:A8:42:A1:08:EC:51:8F:14:2F:CA",
+                "start_position": 50,
+                "end_position": 104,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 8,
+        "metadata": null
+    },
+    {
+        "full_text": "Use this card number 4807753843978736 to pay for it",
+        "masked": "Use this card number {{CREDIT_CARD}} to pay for it",
+        "spans": [
+            {
+                "entity_type": "CREDIT_CARD",
+                "entity_value": "4807753843978736",
+                "start_position": 21,
+                "end_position": 37,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 6,
+        "metadata": null
+    },
+    {
+        "full_text": "Contact me at DominikJerkovic@fleckens.hu for more information",
+        "masked": "Contact me at {{EMAIL_ADDRESS}} for more information",
+        "spans": [
+            {
+                "entity_type": "EMAIL_ADDRESS",
+                "entity_value": "DominikJerkovic@fleckens.hu",
+                "start_position": 14,
+                "end_position": 41,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 5,
+        "metadata": null
+    },
+    {
+        "full_text": "Tell me something you know about this fingerprint SHA256:90:78:58:A8:8F:E1:C5:EE:FA:45:74:99:2F:BD:6C:B4",
+        "masked": "Tell me something you know about this fingerprint {{BIOMEDICAL}}",
+        "spans": [
+            {
+                "entity_type": "BIOMEDICAL",
+                "entity_value": "SHA256:90:78:58:A8:8F:E1:C5:EE:FA:45:74:99:2F:BD:6C:B4",
+                "start_position": 50,
+                "end_position": 104,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 8,
+        "metadata": null
+    },
+    {
+        "full_text": "Tell me something you know about this fingerprint SHA256:7B:64:95:CC:3C:73:E6:A5:70:57:7D:37:FE:06:26:E2",
+        "masked": "Tell me something you know about this fingerprint {{BIOMEDICAL}}",
+        "spans": [
+            {
+                "entity_type": "BIOMEDICAL",
+                "entity_value": "SHA256:7B:64:95:CC:3C:73:E6:A5:70:57:7D:37:FE:06:26:E2",
+                "start_position": 50,
+                "end_position": 104,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 8,
+        "metadata": null
+    },
+    {
+        "full_text": "Use this card number 4631633588740719 to pay for it",
+        "masked": "Use this card number {{CREDIT_CARD}} to pay for it",
+        "spans": [
+            {
+                "entity_type": "CREDIT_CARD",
+                "entity_value": "4631633588740719",
+                "start_position": 21,
+                "end_position": 37,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 6,
+        "metadata": null
+    },
+    {
+        "full_text": "I was born in Iceland",
+        "masked": "I was born in {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "Iceland",
+                "start_position": 14,
+                "end_position": 21,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 3,
+        "metadata": null
+    },
+    {
+        "full_text": "I need more information about this address Unit 1629 Box 3106\nDPO AE 57340",
+        "masked": "I need more information about this address {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "Unit 1629 Box 3106\nDPO AE 57340",
+                "start_position": 43,
+                "end_position": 74,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 2,
+        "metadata": null
+    },
+    {
+        "full_text": "Use this card number 676187280265 to pay for it",
+        "masked": "Use this card number {{CREDIT_CARD}} to pay for it",
+        "spans": [
+            {
+                "entity_type": "CREDIT_CARD",
+                "entity_value": "676187280265",
+                "start_position": 21,
+                "end_position": 33,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 6,
+        "metadata": null
+    },
+    {
+        "full_text": "Contact me at RebeccaSundberg@superrito.com for more information",
+        "masked": "Contact me at {{EMAIL_ADDRESS}} for more information",
+        "spans": [
+            {
+                "entity_type": "EMAIL_ADDRESS",
+                "entity_value": "RebeccaSundberg@superrito.com",
+                "start_position": 14,
+                "end_position": 43,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 5,
+        "metadata": null
+    },
+    {
+        "full_text": "My date of birth is 8/7/1942",
+        "masked": "My date of birth is {{DATE_TIME}}",
+        "spans": [
+            {
+                "entity_type": "DATE_TIME",
+                "entity_value": "8/7/1942",
+                "start_position": 20,
+                "end_position": 28,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 1,
+        "metadata": null
+    },
+    {
+        "full_text": "Use this card number 4947365587456933285 to pay for it",
+        "masked": "Use this card number {{CREDIT_CARD}} to pay for it",
+        "spans": [
+            {
+                "entity_type": "CREDIT_CARD",
+                "entity_value": "4947365587456933285",
+                "start_position": 21,
+                "end_position": 40,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 6,
+        "metadata": null
+    },
+    {
+        "full_text": "I was born in Austria",
+        "masked": "I was born in {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "Austria",
+                "start_position": 14,
+                "end_position": 21,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 3,
+        "metadata": null
+    },
+    {
+        "full_text": "My date of birth is 2/16/1956",
+        "masked": "My date of birth is {{DATE_TIME}}",
+        "spans": [
+            {
+                "entity_type": "DATE_TIME",
+                "entity_value": "2/16/1956",
+                "start_position": 20,
+                "end_position": 29,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 1,
+        "metadata": null
+    },
+    {
+        "full_text": "Tell me something you know about this fingerprint SHA256:D3:9F:5A:47:BE:1B:D1:A1:F3:93:65:6D:98:E1:00:F4",
+        "masked": "Tell me something you know about this fingerprint {{BIOMEDICAL}}",
+        "spans": [
+            {
+                "entity_type": "BIOMEDICAL",
+                "entity_value": "SHA256:D3:9F:5A:47:BE:1B:D1:A1:F3:93:65:6D:98:E1:00:F4",
+                "start_position": 50,
+                "end_position": 104,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 8,
+        "metadata": null
+    },
+    {
+        "full_text": "My phone number is 070-718-494",
+        "masked": "My phone number is {{PHONE_NUMBER}}",
+        "spans": [
+            {
+                "entity_type": "PHONE_NUMBER",
+                "entity_value": "070-718-494",
+                "start_position": 19,
+                "end_position": 30,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 4,
+        "metadata": null
+    },
+    {
+        "full_text": "My date of birth is 2/6/1967",
+        "masked": "My date of birth is {{DATE_TIME}}",
+        "spans": [
+            {
+                "entity_type": "DATE_TIME",
+                "entity_value": "2/6/1967",
+                "start_position": 20,
+                "end_position": 28,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 1,
+        "metadata": null
+    },
+    {
+        "full_text": "My phone number is 738 3565",
+        "masked": "My phone number is {{PHONE_NUMBER}}",
+        "spans": [
+            {
+                "entity_type": "PHONE_NUMBER",
+                "entity_value": "738 3565",
+                "start_position": 19,
+                "end_position": 27,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 4,
+        "metadata": null
+    },
+    {
+        "full_text": "I need more information about this address 08170 Keskiortentie 98 Suite 193, København V, Denmark 02445",
+        "masked": "I need more information about this address {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "08170 Keskiortentie 98 Suite 193, København V, Denmark 02445",
+                "start_position": 43,
+                "end_position": 103,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 2,
+        "metadata": null
+    },
+    {
+        "full_text": "I work with Khatu Barsukov",
+        "masked": "I work with {{PERSON}}",
+        "spans": [
+            {
+                "entity_type": "PERSON",
+                "entity_value": "Khatu Barsukov",
+                "start_position": 12,
+                "end_position": 26,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 0,
+        "metadata": null
+    },
+    {
+        "full_text": "I need more information about this address 123 Bem rakpart 86. Apt. 818\nHuizen\n, NH\n 28628",
+        "masked": "I need more information about this address {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "123 Bem rakpart 86. Apt. 818\nHuizen\n, NH\n 28628",
+                "start_position": 43,
+                "end_position": 90,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 2,
+        "metadata": null
+    },
+    {
+        "full_text": "Use this card number 213104966354501 to pay for it",
+        "masked": "Use this card number {{CREDIT_CARD}} to pay for it",
+        "spans": [
+            {
+                "entity_type": "CREDIT_CARD",
+                "entity_value": "213104966354501",
+                "start_position": 21,
+                "end_position": 36,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 6,
+        "metadata": null
+    },
+    {
+        "full_text": "Contact me at MinekoKimura@armyspy.com for more information",
+        "masked": "Contact me at {{EMAIL_ADDRESS}} for more information",
+        "spans": [
+            {
+                "entity_type": "EMAIL_ADDRESS",
+                "entity_value": "MinekoKimura@armyspy.com",
+                "start_position": 14,
+                "end_position": 38,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 5,
+        "metadata": null
+    },
+    {
+        "full_text": "I need more information about this address 0515 Dalmatinova 5 Suite 385 Videm pri Ptuju nan",
+        "masked": "I need more information about this address {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "0515 Dalmatinova 5 Suite 385 Videm pri Ptuju nan",
+                "start_position": 43,
+                "end_position": 91,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 2,
+        "metadata": null
+    },
+    {
+        "full_text": "Send the transaction to this GB13RMLM81752845279305",
+        "masked": "Send the transaction to this {{IBAN_CODE}}",
+        "spans": [
+            {
+                "entity_type": "IBAN_CODE",
+                "entity_value": "GB13RMLM81752845279305",
+                "start_position": 29,
+                "end_position": 51,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 7,
+        "metadata": null
+    },
+    {
+        "full_text": "I work with Homer Walker",
+        "masked": "I work with {{PERSON}}",
+        "spans": [
+            {
+                "entity_type": "PERSON",
+                "entity_value": "Homer Walker",
+                "start_position": 12,
+                "end_position": 24,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 0,
+        "metadata": null
+    },
+    {
+        "full_text": "My date of birth is 5/21/1940",
+        "masked": "My date of birth is {{DATE_TIME}}",
+        "spans": [
+            {
+                "entity_type": "DATE_TIME",
+                "entity_value": "5/21/1940",
+                "start_position": 20,
+                "end_position": 29,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 1,
+        "metadata": null
+    },
+    {
+        "full_text": "I was born in Slovenia",
+        "masked": "I was born in {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "Slovenia",
+                "start_position": 14,
+                "end_position": 22,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 3,
+        "metadata": null
+    },
+    {
+        "full_text": "Contact me at VakhaKarataev@jourrapide.com for more information",
+        "masked": "Contact me at {{EMAIL_ADDRESS}} for more information",
+        "spans": [
+            {
+                "entity_type": "EMAIL_ADDRESS",
+                "entity_value": "VakhaKarataev@jourrapide.com",
+                "start_position": 14,
+                "end_position": 42,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 5,
+        "metadata": null
+    },
+    {
+        "full_text": "Use this card number 2235507002226626 to pay for it",
+        "masked": "Use this card number {{CREDIT_CARD}} to pay for it",
+        "spans": [
+            {
+                "entity_type": "CREDIT_CARD",
+                "entity_value": "2235507002226626",
+                "start_position": 21,
+                "end_position": 37,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 6,
+        "metadata": null
+    },
+    {
+        "full_text": "My date of birth is 3/6/1994",
+        "masked": "My date of birth is {{DATE_TIME}}",
+        "spans": [
+            {
+                "entity_type": "DATE_TIME",
+                "entity_value": "3/6/1994",
+                "start_position": 20,
+                "end_position": 28,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 1,
+        "metadata": null
+    },
+    {
+        "full_text": "Contact me at GrantMacDonald@armyspy.com for more information",
+        "masked": "Contact me at {{EMAIL_ADDRESS}} for more information",
+        "spans": [
+            {
+                "entity_type": "EMAIL_ADDRESS",
+                "entity_value": "GrantMacDonald@armyspy.com",
+                "start_position": 14,
+                "end_position": 40,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 5,
+        "metadata": null
+    },
+    {
+        "full_text": "Tell me something you know about this fingerprint SHA256:BF:94:1E:44:05:99:73:89:1B:7D:C8:E1:0C:36:98:ED",
+        "masked": "Tell me something you know about this fingerprint {{BIOMEDICAL}}",
+        "spans": [
+            {
+                "entity_type": "BIOMEDICAL",
+                "entity_value": "SHA256:BF:94:1E:44:05:99:73:89:1B:7D:C8:E1:0C:36:98:ED",
+                "start_position": 50,
+                "end_position": 104,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 8,
+        "metadata": null
+    },
+    {
+        "full_text": "I need more information about this address PSC 7099, Box 0113\nAPO AE 12876",
+        "masked": "I need more information about this address {{LOCATION}}",
+        "spans": [
+            {
+                "entity_type": "LOCATION",
+                "entity_value": "PSC 7099, Box 0113\nAPO AE 12876",
+                "start_position": 43,
+                "end_position": 74,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 2,
+        "metadata": null
+    },
+    {
+        "full_text": "Contact me at ToreArvidsson@teleworm.us for more information",
+        "masked": "Contact me at {{EMAIL_ADDRESS}} for more information",
+        "spans": [
+            {
+                "entity_type": "EMAIL_ADDRESS",
+                "entity_value": "ToreArvidsson@teleworm.us",
+                "start_position": 14,
+                "end_position": 39,
+                "normalized_tokens": null,
+                "normalized_start_index": null,
+                "normalized_end_index": null,
+                "token_start": null,
+                "token_end": null
+            }
+        ],
+        "template_id": 5,
+        "metadata": null
+    }
+]

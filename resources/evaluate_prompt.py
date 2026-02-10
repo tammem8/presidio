@@ -2,36 +2,25 @@
 
 import argparse
 import time
-from pathlib import Path
 
-from scripts.analyzer import create_analyzer_engine
-from scripts.models import PromptEvaluationInput
-from scripts.utils import load_analyzer_config
+from .scripts.analyzer import create_analyzer_engine
+from .scripts.models import PromptEvaluationInput
 
 
-def analyze_text(prompt_input: PromptEvaluationInput, config_path: Path | None = None) -> None:
+def analyze_text(prompt_input: PromptEvaluationInput) -> None:
     """Analyze text for PII entities and print results.
 
     Args:
         prompt_input: Input configuration containing text and language.
-        config_path: Optional path to the analyzer configuration JSON file.
-            If None, uses the default config from the config folder.
     """
-    # Load analyzer configuration
-    config = load_analyzer_config(str(config_path) if config_path else None)
-
-    # Override language if specified in prompt input
-    config.language = prompt_input.language
-
-    # Create analyzer engine
-    analyzer = create_analyzer_engine(config)
+    # Create analyzer engine using YAML config files
+    analyzer = create_analyzer_engine()
 
     # Analyze the text with timing
     start_time = time.perf_counter()
     results = analyzer.analyze(
         text=prompt_input.text,
         language=prompt_input.language,
-        score_threshold=config.default_score_threshold,
     )
     elapsed_time = time.perf_counter() - start_time
 
@@ -76,14 +65,6 @@ def main() -> None:
         default="en",
         help="Language code for the text (default: en).",
     )
-    parser.add_argument(
-        "--analyzer-config",
-        "-c",
-        type=str,
-        default=None,
-        help="Path to analyzer configuration JSON file. If not provided, uses default config from config folder.",
-    )
-
     args = parser.parse_args()
 
     # Create input model
@@ -92,9 +73,8 @@ def main() -> None:
         language=args.language,
     )
 
-    # Run analysis with optional config path
-    config_path = Path(args.analyzer_config) if args.analyzer_config else None
-    analyze_text(prompt_input, config_path=config_path)
+    # Run analysis
+    analyze_text(prompt_input)
 
 
 if __name__ == "__main__":

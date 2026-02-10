@@ -68,7 +68,6 @@ Create a JSON config file with the following structure:
 | `nlp_engine_name` | Yes | NLP engine to use (e.g., `spacy`) |
 | `model_name` | Yes | Model name (e.g., `en_core_web_sm`, `en_core_web_lg`) |
 | `language` | Yes | Language code (e.g., `en`) |
-| `context_enhancer_count` | No | Number of context words to consider for enhancing detection |
 | `recognizers_to_keep` | No | List of built-in recognizers to enable (e.g., `SpacyRecognizer`, `EmailRecognizer`) |
 | `custom_recognizers` | No | List of custom pattern-based recognizers |
 | `entity_mappings` | No | Mappings from source entity types to target types |

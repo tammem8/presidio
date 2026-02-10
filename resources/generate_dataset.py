@@ -3,15 +3,15 @@
 Script to generate fake PII data using Presidio Evaluator.
 
 Usage:
-    python generate_fake_data.py --config config.json --output ./output
+    python generate_fake_data.py --config config.yaml --output ./output
 """
 
 import argparse
-import json
 import os
 import random
 import string
 
+import yaml
 from faker.providers import BaseProvider
 from presidio_evaluator import InputSample
 from presidio_evaluator.data_generator import PresidioSentenceFaker
@@ -49,9 +49,9 @@ CUSTOM_PROVIDERS = {
 
 
 def load_config(config_path: str) -> dict:
-    """Load configuration from JSON file."""
+    """Load configuration from YAML file."""
     with open(config_path, "r") as f:
-        config = json.load(f)
+        config = yaml.safe_load(f)
 
     # Validate required fields
     required_fields = ["sentence_templates", "sentence_mapping"]
@@ -154,7 +154,7 @@ def main():
         "-c",
         type=str,
         required=True,
-        help="Path to JSON config file containing sentence_templates and other settings",
+        help="Path to YAML config file containing sentence_templates and other settings",
     )
     parser.add_argument(
         "--output",

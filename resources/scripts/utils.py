@@ -3,44 +3,11 @@
 import json
 from collections import Counter
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Set, Tuple
+from typing import Any, Dict, List, Set, Tuple
 
 from presidio_evaluator import InputSample
 
-from .models import AnalyzerConfig, EvaluationOutput
-
-
-# =============================================================================
-# Configuration Loading Utilities
-# =============================================================================
-
-
-def load_analyzer_config(config_path: Optional[str]) -> AnalyzerConfig:
-    """Load analyzer configuration from file or use Pydantic defaults.
-
-    Args:
-        config_path: Optional path to analyzer configuration JSON file.
-            If None, looks for analyzer_config.json in the config folder.
-
-    Returns:
-        AnalyzerConfig instance.
-    """
-    if config_path:
-        print(f"Loading analyzer configuration from: {config_path}")
-        with open(config_path, "r", encoding="utf-8") as f:
-            config_dict = json.load(f)
-        return AnalyzerConfig(**config_dict)
-
-    # Look for default config file in config folder
-    default_config_path = Path(__file__).parent.parent / "config" / "analyzer_config.json"
-    if default_config_path.exists():
-        print(f"Loading analyzer configuration from default: {default_config_path}")
-        with open(default_config_path, "r", encoding="utf-8") as f:
-            config_dict = json.load(f)
-        return AnalyzerConfig(**config_dict)
-
-    print("Using default analyzer configuration")
-    return AnalyzerConfig()
+from .models import EvaluationOutput
 
 
 # =============================================================================
@@ -105,35 +72,6 @@ def print_dataset_stats(dataset: List[InputSample]) -> None:
         print(f"Token count - Min: {min(token_lengths)}, Max: {max(token_lengths)}")
         print(f"Text length - Min: {min(text_lengths)}, Max: {max(text_lengths)}")
     print("=" * 60)
-
-
-def check_entity_mappings(
-    dataset: List[InputSample],
-    entities_mapping: Dict[str, str],
-) -> Set[str]:
-    """Check if all dataset entities are mapped to recognizers.
-
-    Args:
-        dataset: List of InputSample objects.
-        entities_mapping: Dictionary of entity type mappings.
-
-    Returns:
-        Set of unmapped entity types.
-    """
-    mapped_entities = set(entities_mapping.keys())
-    dataset_entities = set()
-
-    for sample in dataset:
-        for span in sample.spans:
-            dataset_entities.add(span.entity_type)
-
-    unmapped = dataset_entities - mapped_entities
-    if unmapped:
-        print(f"WARNING: Unmapped entities found: {unmapped}")
-        for entity in unmapped:
-            print(f"  Entity '{entity}' is not mapped to a recognizer.")
-
-    return unmapped
 
 
 def filter_mapped_samples(

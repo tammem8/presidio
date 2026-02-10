@@ -25,12 +25,12 @@ tasks:
   detector:generate:
     desc: Generate fake PII data using Presidio Evaluator
     cmds:
-      - uv run resources/generate_fake_data.py --config resources/config/sample_config.json --output resources/data
+      - uv run resources/generate_fake_data.py --config resources/config/generate-data-config.yaml --output resources/data
 
   detector:evaluate:
     desc: Evaluate PII detection on a JSON dataset
     cmds:
-      - uv run resources/evaluate_dataset.py --input resources/data/fake_pii_data_size_200_en_US.json --output evaluation_output --analyzer-config resources/config/analyzer_config.json
+      - uv run resources/evaluate_dataset.py --input resources/data/fake_pii_data_size_200_en_US.json --output evaluation_output --score-threshold 0.4
 
   detector:prompt_evaluate:
     desc: Evaluate PII detection using prompt-based approach

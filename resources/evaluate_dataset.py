@@ -8,16 +8,15 @@ Evaluates a JSON input dataset against Presidio Analyzer and outputs:
 
 Usage:
     python evaluate.py --input data.json --output ./results
-    python evaluate.py --input data.json --output ./results --config config.json
 """
 
 import argparse
-from typing import Optional, Tuple
+from pathlib import Path
 
+import pandas as pd
 from presidio_evaluator.evaluation import ModelError, SpanEvaluator
-
-from .scripts.models import AnalyzerConfig, EvaluationOutput
-from .scripts.analyzer import create_analyzer_engine, get_entities_mapping
+from .scripts.models import EvaluationOutput
+from .scripts.analyzer import create_analyzer_engine
 from .scripts.utils import (
     load_dataset,
     get_entity_counts,
@@ -28,50 +27,40 @@ from .scripts.utils import (
     save_errors_csv,
     plot_confusion_matrix,
     print_results_summary,
-    load_analyzer_config,
 )
-from .scripts.evaluation import run_evaluation, create_evaluation_output
+from .scripts.evaluation import build_entities_mapping, run_evaluation, create_evaluation_output
 
 
 def evaluate(
     input_path: str,
     output_path: str,
-    analyzer_config: Optional[AnalyzerConfig] = None,
-    allow_missing_mappings: bool = True,
-    score_threshold: float = 0.4,
 ) -> EvaluationOutput:
     """
     Main evaluation function.
 
     Args:
         input_path: Path to input JSON dataset
-        output_path: Path to output directory
-        analyzer_config: Optional analyzer configuration
-        allow_missing_mappings: Whether to allow missing entity mappings
-        score_threshold: Minimum score threshold for detections
+        output_path: Path to output directory for results
 
     Returns:
         EvaluationOutput with metrics and errors
     """
-    # Load analyzer configuration if not provided
-    if analyzer_config is None:
-        analyzer_config = load_analyzer_config(None)
 
     # Load dataset
     dataset = load_dataset(input_path)
     print_dataset_stats(dataset)
 
-    # Create analyzer engine
-    analyzer_engine = create_analyzer_engine(analyzer_config)
+    # Create analyzer engine using YAML config files
+    analyzer_engine = create_analyzer_engine()
 
-    # Get entity mappings
-    entities_mapping = get_entities_mapping(analyzer_config)
-
+    # Build entity mappings from all sources
+    entities_mapping = build_entities_mapping(analyzer_engine)
+        
     # Align entity types
     dataset = SpanEvaluator.align_entity_types(
         dataset,
         entities_mapping=entities_mapping,
-        allow_missing_mappings=allow_missing_mappings,
+        allow_missing_mappings=True,
     )
 
     # Print aligned entity counts
@@ -87,13 +76,15 @@ def evaluate(
     )
 
     # Run evaluation
-    results, evaluation_results = run_evaluation(
-        dataset_mapped, analyzer_engine, score_threshold=score_threshold
+    results, _ = run_evaluation(
+        dataset_mapped, analyzer_engine
     )
 
-    # Extract errors
-    fps = ModelError.get_fps_dataframe(results.model_errors)
-    fns = ModelError.get_fns_dataframe(results.model_errors)
+    # Extract errors (these methods return None when no errors found)
+    fps_result = ModelError.get_fps_dataframe(results.model_errors)
+    fns_result = ModelError.get_fns_dataframe(results.model_errors)
+    fps = fps_result if fps_result is not None else pd.DataFrame()
+    fns = fns_result if fns_result is not None else pd.DataFrame()
 
     # Create output
     output = create_evaluation_output(
@@ -101,10 +92,7 @@ def evaluate(
         dataset=dataset_mapped,
         samples_discarded=len(dataset_not_mapped),
         fps=fps,
-        fns=fns,
-        analyzer_config=analyzer_config,
-        allow_missing_mappings=allow_missing_mappings,
-        score_threshold=score_threshold,
+        fns=fns
     )
 
     # Print summary
@@ -131,8 +119,7 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-    python evaluate.py --input data.json --output ./results
-    python evaluate.py --input data.json --output ./results --config config.json
+    python evaluate.py --input data.json --output ./results-
         """,
     )
 
@@ -148,43 +135,13 @@ Examples:
         required=True,
         help="Path to output directory for results",
     )
-    parser.add_argument(
-        "--analyzer-config",
-        "-c",
-        help="Path to analyzer configuration JSON file",
-    )
-    parser.add_argument(
-        "--allow-missing-mappings",
-        action="store_true",
-        default=True,
-        help="Allow missing entity mappings (default: True)",
-    )
-    parser.add_argument(
-        "--no-allow-missing-mappings",
-        action="store_false",
-        dest="allow_missing_mappings",
-        help="Disallow missing entity mappings",
-    )
-    parser.add_argument(
-        "--score-threshold",
-        "-t",
-        type=float,
-        default=0.4,
-        help="Minimum score threshold for detections (default: 0.4)",
-    )
 
     args = parser.parse_args()
-
-    # Load analyzer config
-    analyzer_config = load_analyzer_config(args.analyzer_config)
 
     # Run evaluation
     evaluate(
         input_path=args.input,
-        output_path=args.output,
-        analyzer_config=analyzer_config,
-        allow_missing_mappings=args.allow_missing_mappings,
-        score_threshold=args.score_threshold,
+        output_path=args.output
     )
 
 

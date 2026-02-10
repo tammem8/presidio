@@ -1,0 +1,25 @@
+sentence_templates:
+  - "I work with {{person}}"
+  - "My date of birth is {{date_of_birth}}"
+  - "I need more information about this address {{address}}"
+  - "I was born in {{country}}"
+  - "My phone number is {{phone_number}}"
+  - "Contact me at {{email}} for more information"
+  - "Use this card number {{credit_card}} to pay for it"
+  - "Send the transaction to this {{iban}}"
+  - "Tell me something you know about this fingerprint {{fingerprint_hash}}"
+
+sentence_mapping:
+  person: PERSON
+  date_of_birth: DATE_TIME
+  address: LOCATION
+  country: LOCATION
+  phone_number: PHONE_NUMBER
+  email: EMAIL_ADDRESS
+  credit_card: CREDIT_CARD
+  iban: IBAN_CODE
+  fingerprint_hash: BIOMEDICAL
+
+language: en_US
+number_of_samples: 200
+output_name: fake_data_test

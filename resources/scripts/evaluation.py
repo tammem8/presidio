@@ -1,20 +1,63 @@
 """Core evaluation logic."""
 
+from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
 import pandas as pd
+import yaml
 from presidio_analyzer import AnalyzerEngine
 from presidio_evaluator import InputSample
 from presidio_evaluator.evaluation import SpanEvaluator
+from presidio_evaluator.models import PresidioAnalyzerWrapper
 
 from .utils import get_entity_counts
-from .models import AnalyzerConfig, EvaluationMetrics, EvaluationOutput
+from .models import EvaluationMetrics, EvaluationOutput
+
+CONFIG_DIR = Path(__file__).parent.parent / "config"
+
+
+def build_entities_mapping(analyzer_engine: AnalyzerEngine) -> Dict[str, str]:
+    """Build a complete entity type mapping from all sources.
+
+    Combines mappings from:
+    - PresidioAnalyzerWrapper default mappings
+    - NLP config (spaCy NER label -> Presidio entity)
+    - Analyzer engine supported entities (predefined + custom recognizers)
+    - Recognizers config (custom recognizer entities)
+
+    Args:
+        analyzer_engine: Configured AnalyzerEngine to query for supported entities.
+
+    Returns:
+        Dict mapping entity labels to Presidio entity types.
+    """
+    entities_mapping = dict(PresidioAnalyzerWrapper.presidio_entities_map)
+
+    # Add mappings from NLP config (spaCy NER label -> Presidio entity)
+    nlp_config_path = CONFIG_DIR / "nlp-config.yaml"
+    with open(nlp_config_path) as f:
+        nlp_config = yaml.safe_load(f)
+    for entity, presidio_entity in nlp_config["ner_model_configuration"]["model_to_presidio_entity_mapping"].items():
+        entities_mapping[entity] = presidio_entity
+
+    # Add identity mappings for all recognizer entities (predefined + custom)
+    for supported_entity in analyzer_engine.get_supported_entities():
+        entities_mapping.setdefault(supported_entity, supported_entity)
+
+    # Add custom recognizer entity mappings from recognizers config
+    recognizers_config_path = CONFIG_DIR / "recognizers-config.yaml"
+    with open(recognizers_config_path) as f:
+        recognizers_config = yaml.safe_load(f)
+    for recognizer in recognizers_config.get("recognizers", []):
+        if "supported_entity" in recognizer:
+            entities_mapping.setdefault(recognizer["supported_entity"], recognizer["supported_entity"])
+
+    return entities_mapping
 
 
 def run_evaluation(
     dataset: List[InputSample],
     analyzer_engine: AnalyzerEngine,
-    score_threshold: float = 0.4,
 ) -> Tuple[Any, Any]:
     """Run the evaluation and return results.
 
@@ -27,10 +70,11 @@ def run_evaluation(
         Tuple of (aggregated results, individual evaluation results).
     """
     print("Running evaluation...")
-    evaluator = SpanEvaluator(model=analyzer_engine, skip_words=[])
-    evaluation_results = evaluator.evaluate_all(
-        dataset, score_threshold=score_threshold
+    evaluator = SpanEvaluator(
+        model=analyzer_engine, 
+        skip_words=[],
     )
+    evaluation_results = evaluator.evaluate_all(dataset)
     results = evaluator.calculate_score(evaluation_results)
 
     return results, evaluation_results
@@ -42,9 +86,6 @@ def create_evaluation_output(
     samples_discarded: int,
     fps: pd.DataFrame,
     fns: pd.DataFrame,
-    analyzer_config: Optional[AnalyzerConfig] = None,
-    allow_missing_mappings: bool = True,
-    score_threshold: float = 0.4,
 ) -> EvaluationOutput:
     """Create the evaluation output with metrics and error dataframes.
 
@@ -63,17 +104,6 @@ def create_evaluation_output(
     """
     entity_counts = get_entity_counts(dataset)
 
-    # Combine configs for output
-    config_dict: Optional[Dict[str, Any]] = None
-    if analyzer_config:
-        config_dict = {
-            "analyzer": analyzer_config.model_dump(),
-            "evaluation": {
-                "allow_missing_mappings": allow_missing_mappings,
-                "score_threshold": score_threshold,
-            },
-        }
-
     metrics = EvaluationMetrics(
         pii_precision=results.pii_precision,
         pii_recall=results.pii_recall,
@@ -83,8 +113,7 @@ def create_evaluation_output(
         total_samples=len(dataset) + samples_discarded,
         total_entities=sum(entity_counts.values()),
         samples_evaluated=len(dataset),
-        samples_discarded=samples_discarded,
-        config=config_dict,
+        samples_discarded=samples_discarded
     )
 
     return EvaluationOutput(metrics=metrics, fps=fps, fns=fns)

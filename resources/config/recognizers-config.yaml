@@ -1,0 +1,60 @@
+supported_languages:
+- en
+global_regex_flags: 26
+
+recognizers:
+- name: SpacyRecognizer
+  type: predefined
+  enabled: true
+  context:
+    - address
+    - location
+
+- name: DateRecognizer
+  type: predefined
+  enabled: true
+
+- name: PhoneRecognizer
+  type: predefined
+  enabled: true
+
+- name: CustomPhoneRecognizer
+  supported_entity: "PHONE_NUMBER"
+  supported_language: "en"
+  patterns:
+    - name: "Space-or-Hyphen-separated phone"
+      regex: "\\b\\d{2,8}(?:[ -]\\d{2,8}){1,4}\\b"
+      score: 1.0
+
+- name: EmailRecognizer
+  type: predefined
+  enabled: true
+
+- name: IbanRecognizer
+  type: predefined
+  enabled: true
+
+- name: CreditCardRecognizer
+  type: predefined
+  enabled: true
+
+- name: CreditCard19Recognizer
+  supported_entity: "CREDIT_CARD"
+  supported_language: "en"
+  patterns:
+    - name: "19-digit credit card"
+      regex: "\\b\\d{19}\\b"
+      score: 0.6
+  context:
+    - credit
+    - card
+
+- name: FingerprintRecognizer
+  supported_entity: "BIOMEDICAL"
+  supported_language: "en"
+  patterns:
+    - name: "Fingerprint Hash Pattern"
+      regex: "SHA256:[0-9A-Fa-f]{2}(?::[0-9A-Fa-f]{2}){15}"
+      score: 0.6
+  context:
+    - fingerprint
