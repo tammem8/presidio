@@ -1,25 +1,273 @@
-sentence_templates:
-  - "I work with {{person}}"
-  - "My date of birth is {{date_of_birth}}"
-  - "I need more information about this address {{address}}"
-  - "I was born in {{country}}"
-  - "My phone number is {{phone_number}}"
-  - "Contact me at {{email}} for more information"
-  - "Use this card number {{credit_card}} to pay for it"
-  - "Send the transaction to this {{iban}}"
-  - "Tell me something you know about this fingerprint {{fingerprint_hash}}"
+languages:
+  en_US:
+    sentence_templates:
+      # PERSON
+      - "I work with {{person}}"
+      - "Please forward this to {{person}} as soon as possible"
+      - "The account is registered under {{person}}"
+      - "Schedule a meeting with {{person}} for next week"
+      - "{{person}} submitted the request on behalf of the team"
+      - "The complaint was filed by {{person}}"
+      - "Can you confirm that {{person}} signed the agreement?"
+      - "{{person}} is listed as the emergency contact"
 
-sentence_mapping:
-  person: PERSON
-  date_of_birth: DATE_TIME
-  address: LOCATION
-  country: LOCATION
-  phone_number: PHONE_NUMBER
-  email: EMAIL_ADDRESS
-  credit_card: CREDIT_CARD
-  iban: IBAN_CODE
-  fingerprint_hash: BIOMEDICAL
+      # DATE_TIME
+      - "My date of birth is {{date_of_birth}}"
+      - "The contract expires on {{date_of_birth}}"
+      - "The incident occurred on {{date_of_birth}}"
+      - "Please reschedule the appointment to {{date_of_birth}}"
+      - "Records show the last login was on {{date_of_birth}}"
 
-language: en_US
-number_of_samples: 200
-output_name: fake_data_test
+      # LOCATION (address)
+      - "I need more information about this address {{address}}"
+      - "Ship the package to {{address}}"
+      - "The office is located at {{address}}"
+      - "Please update my billing address to {{address}}"
+      - "The inspection will take place at {{address}}"
+      - "We confirmed the delivery to {{address}}"
+
+      # LOCATION (country)
+      - "I was born in {{country}}"
+      - "The transaction originated from {{country}}"
+      - "Our subsidiary operates in {{country}}"
+      - "The passport was issued in {{country}}"
+      - "Data will be stored in servers located in {{country}}"
+
+      # PHONE_NUMBER
+      - "My phone number is {{phone_number}}"
+      - "You can reach me at {{phone_number}}"
+      - "For urgent matters, call {{phone_number}}"
+      - "The customer's callback number is {{phone_number}}"
+      - "Please update the contact number to {{phone_number}}"
+      - "Send the verification code to {{phone_number}}"
+
+      # EMAIL_ADDRESS
+      - "Contact me at {{email}} for more information"
+      - "Send the invoice to {{email}}"
+      - "The confirmation was sent to {{email}}"
+      - "Please add {{email}} to the mailing list"
+      - "Reset the password for the account linked to {{email}}"
+      - "Notifications will be sent to {{email}}"
+
+      # CREDIT_CARD
+      - "Use this card number {{credit_card}} to pay for it"
+      - "The refund was processed to card {{credit_card}}"
+      - "Please charge {{credit_card}} for the subscription"
+      - "The payment failed for card ending in {{credit_card}}"
+      - "We have {{credit_card}} on file for this account"
+
+      # IBAN_CODE
+      - "Send the transaction to this {{iban}}"
+      - "The wire transfer should go to {{iban}}"
+      - "Please verify the account number {{iban}} before proceeding"
+      - "Salary payments are deposited to {{iban}}"
+      - "The refund will be credited to {{iban}}"
+
+      # BIOMEDICAL (fingerprint)
+      - "Tell me something you know about this fingerprint {{fingerprint_hash}}"
+      - "The device was authenticated using fingerprint {{fingerprint_hash}}"
+      - "Certificate fingerprint is {{fingerprint_hash}}"
+      - "Verify the server identity with fingerprint {{fingerprint_hash}}"
+
+      # Multi-entity templates
+      - "{{person}} can be reached at {{phone_number}}"
+      - "Send the documents to {{person}} at {{email}}"
+      - "{{person}} lives at {{address}}"
+      - "{{person}} was born on {{date_of_birth}} in {{country}}"
+      - "Please charge {{credit_card}} for the order shipping to {{address}}"
+      - "Transfer the funds from {{iban}} to the account of {{person}}"
+      - "{{person}} requested a callback at {{phone_number}} regarding the payment on {{credit_card}}"
+      - "The invoice for {{person}} should be sent to {{email}} and charged to {{credit_card}}"
+
+    sentence_mapping:
+      person: PERSON
+      date_of_birth: DATE_TIME
+      address: LOCATION
+      country: LOCATION
+      phone_number: PHONE_NUMBER
+      email: EMAIL_ADDRESS
+      credit_card: CREDIT_CARD
+      iban: IBAN_CODE
+      fingerprint_hash: BIOMEDICAL
+
+  de_DE:
+    sentence_templates:
+      # PERSON
+      - "Ich arbeite mit {{person}}"
+      - "Bitte leiten Sie dies an {{person}} weiter"
+      - "Das Konto ist auf {{person}} registriert"
+      - "Vereinbaren Sie einen Termin mit {{person}} für nächste Woche"
+      - "{{person}} hat den Antrag im Namen des Teams eingereicht"
+      - "Die Beschwerde wurde von {{person}} eingereicht"
+      - "Können Sie bestätigen, dass {{person}} den Vertrag unterschrieben hat?"
+      - "{{person}} ist als Notfallkontakt hinterlegt"
+
+      # DATE_TIME
+      - "Mein Geburtsdatum ist {{date_of_birth}}"
+      - "Der Vertrag läuft am {{date_of_birth}} aus"
+      - "Der Vorfall ereignete sich am {{date_of_birth}}"
+      - "Bitte verschieben Sie den Termin auf {{date_of_birth}}"
+      - "Die letzte Anmeldung war am {{date_of_birth}}"
+
+      # LOCATION (address)
+      - "Ich benötige weitere Informationen zu dieser Adresse {{address}}"
+      - "Senden Sie das Paket an {{address}}"
+      - "Das Büro befindet sich in {{address}}"
+      - "Bitte aktualisieren Sie meine Rechnungsadresse auf {{address}}"
+      - "Die Inspektion findet in {{address}} statt"
+      - "Wir haben die Lieferung an {{address}} bestätigt"
+
+      # LOCATION (country)
+      - "Ich wurde in {{country}} geboren"
+      - "Die Transaktion stammt aus {{country}}"
+      - "Unsere Niederlassung befindet sich in {{country}}"
+      - "Der Reisepass wurde in {{country}} ausgestellt"
+      - "Die Daten werden auf Servern in {{country}} gespeichert"
+
+      # PHONE_NUMBER
+      - "Meine Telefonnummer ist {{phone_number}}"
+      - "Sie erreichen mich unter {{phone_number}}"
+      - "In dringenden Fällen rufen Sie {{phone_number}} an"
+      - "Die Rückrufnummer des Kunden ist {{phone_number}}"
+      - "Bitte aktualisieren Sie die Kontaktnummer auf {{phone_number}}"
+      - "Senden Sie den Bestätigungscode an {{phone_number}}"
+
+      # EMAIL_ADDRESS
+      - "Kontaktieren Sie mich unter {{email}} für weitere Informationen"
+      - "Senden Sie die Rechnung an {{email}}"
+      - "Die Bestätigung wurde an {{email}} gesendet"
+      - "Bitte fügen Sie {{email}} zur Mailingliste hinzu"
+      - "Setzen Sie das Passwort für das Konto {{email}} zurück"
+      - "Benachrichtigungen werden an {{email}} gesendet"
+
+      # CREDIT_CARD
+      - "Verwenden Sie diese Kartennummer {{credit_card}} zur Bezahlung"
+      - "Die Rückerstattung wurde auf die Karte {{credit_card}} gebucht"
+      - "Bitte belasten Sie {{credit_card}} für das Abonnement"
+      - "Die Zahlung für die Karte {{credit_card}} ist fehlgeschlagen"
+      - "Wir haben {{credit_card}} für dieses Konto hinterlegt"
+
+      # IBAN_CODE
+      - "Senden Sie die Überweisung an {{iban}}"
+      - "Die Banküberweisung soll an {{iban}} gehen"
+      - "Bitte überprüfen Sie die Kontonummer {{iban}} vor der Überweisung"
+      - "Gehaltszahlungen werden auf {{iban}} überwiesen"
+      - "Die Rückerstattung wird auf {{iban}} gutgeschrieben"
+
+      # BIOMEDICAL (fingerprint)
+      - "Was wissen Sie über diesen Fingerabdruck {{fingerprint_hash}}?"
+      - "Das Gerät wurde mit dem Fingerabdruck {{fingerprint_hash}} authentifiziert"
+      - "Der Zertifikats-Fingerabdruck ist {{fingerprint_hash}}"
+      - "Überprüfen Sie die Serveridentität mit dem Fingerabdruck {{fingerprint_hash}}"
+
+      # Multi-entity templates
+      - "{{person}} ist erreichbar unter {{phone_number}}"
+      - "Senden Sie die Unterlagen an {{person}} per {{email}}"
+      - "{{person}} wohnt in {{address}}"
+      - "{{person}} wurde am {{date_of_birth}} in {{country}} geboren"
+      - "Bitte belasten Sie {{credit_card}} für die Bestellung an {{address}}"
+      - "Überweisen Sie das Geld von {{iban}} auf das Konto von {{person}}"
+      - "{{person}} hat einen Rückruf unter {{phone_number}} bezüglich der Zahlung mit {{credit_card}} angefordert"
+      - "Die Rechnung für {{person}} soll an {{email}} gesendet und über {{credit_card}} abgerechnet werden"
+
+    sentence_mapping:
+      person: PERSON
+      date_of_birth: DATE_TIME
+      address: LOCATION
+      country: LOCATION
+      phone_number: PHONE_NUMBER
+      email: EMAIL_ADDRESS
+      credit_card: CREDIT_CARD
+      iban: IBAN_CODE
+      fingerprint_hash: BIOMEDICAL
+
+  fr_FR:
+    sentence_templates:
+      # PERSON
+      - "Je travaille avec {{person}}"
+      - "Veuillez transmettre ceci à {{person}} dès que possible"
+      - "Le compte est enregistré au nom de {{person}}"
+      - "Planifiez une réunion avec {{person}} pour la semaine prochaine"
+      - "{{person}} a soumis la demande au nom de l'équipe"
+      - "La plainte a été déposée par {{person}}"
+      - "Pouvez-vous confirmer que {{person}} a signé le contrat ?"
+      - "{{person}} est indiqué comme contact d'urgence"
+
+      # DATE_TIME
+      - "Ma date de naissance est le {{date_of_birth}}"
+      - "Le contrat expire le {{date_of_birth}}"
+      - "L'incident s'est produit le {{date_of_birth}}"
+      - "Veuillez reporter le rendez-vous au {{date_of_birth}}"
+      - "La dernière connexion date du {{date_of_birth}}"
+
+      # LOCATION (address)
+      - "J'ai besoin d'informations sur cette adresse {{address}}"
+      - "Envoyez le colis à {{address}}"
+      - "Le bureau se trouve à {{address}}"
+      - "Veuillez mettre à jour mon adresse de facturation à {{address}}"
+      - "L'inspection aura lieu à {{address}}"
+      - "Nous avons confirmé la livraison à {{address}}"
+
+      # LOCATION (country)
+      - "Je suis né en {{country}}"
+      - "La transaction provient de {{country}}"
+      - "Notre filiale est basée en {{country}}"
+      - "Le passeport a été délivré en {{country}}"
+      - "Les données seront stockées sur des serveurs situés en {{country}}"
+
+      # PHONE_NUMBER
+      - "Mon numéro de téléphone est le {{phone_number}}"
+      - "Vous pouvez me joindre au {{phone_number}}"
+      - "En cas d'urgence, appelez le {{phone_number}}"
+      - "Le numéro de rappel du client est le {{phone_number}}"
+      - "Veuillez mettre à jour le numéro de contact au {{phone_number}}"
+      - "Envoyez le code de vérification au {{phone_number}}"
+
+      # EMAIL_ADDRESS
+      - "Contactez-moi à {{email}} pour plus d'informations"
+      - "Envoyez la facture à {{email}}"
+      - "La confirmation a été envoyée à {{email}}"
+      - "Veuillez ajouter {{email}} à la liste de diffusion"
+      - "Réinitialisez le mot de passe du compte lié à {{email}}"
+      - "Les notifications seront envoyées à {{email}}"
+
+      # CREDIT_CARD
+      - "Utilisez ce numéro de carte {{credit_card}} pour le paiement"
+      - "Le remboursement a été effectué sur la carte {{credit_card}}"
+      - "Veuillez débiter {{credit_card}} pour l'abonnement"
+      - "Le paiement a échoué pour la carte {{credit_card}}"
+      - "Nous avons {{credit_card}} enregistrée pour ce compte"
+
+      # IBAN_CODE
+      - "Envoyez le virement à {{iban}}"
+      - "Le virement bancaire doit être envoyé à {{iban}}"
+      - "Veuillez vérifier le numéro de compte {{iban}} avant de procéder"
+      - "Les salaires sont versés sur {{iban}}"
+      - "Le remboursement sera crédité sur {{iban}}"
+
+      # BIOMEDICAL (fingerprint)
+      - "Que savez-vous de cette empreinte {{fingerprint_hash}} ?"
+      - "L'appareil a été authentifié avec l'empreinte {{fingerprint_hash}}"
+      - "L'empreinte du certificat est {{fingerprint_hash}}"
+      - "Vérifiez l'identité du serveur avec l'empreinte {{fingerprint_hash}}"
+
+      # Multi-entity templates
+      - "{{person}} est joignable au {{phone_number}}"
+      - "Envoyez les documents à {{person}} à l'adresse {{email}}"
+      - "{{person}} habite à {{address}}"
+      - "{{person}} est né le {{date_of_birth}} en {{country}}"
+      - "Veuillez débiter {{credit_card}} pour la commande livrée à {{address}}"
+      - "Transférez les fonds de {{iban}} sur le compte de {{person}}"
+      - "{{person}} a demandé un rappel au {{phone_number}} concernant le paiement par {{credit_card}}"
+      - "La facture de {{person}} doit être envoyée à {{email}} et débitée sur {{credit_card}}"
+
+    sentence_mapping:
+      person: PERSON
+      date_of_birth: DATE_TIME
+      address: LOCATION
+      country: LOCATION
+      phone_number: PHONE_NUMBER
+      email: EMAIL_ADDRESS
+      credit_card: CREDIT_CARD
+      iban: IBAN_CODE
+      fingerprint_hash: BIOMEDICAL

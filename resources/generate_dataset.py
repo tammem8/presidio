@@ -9,28 +9,14 @@ Usage:
 import argparse
 import os
 import random
-import string
 
 import yaml
 from faker.providers import BaseProvider
 from presidio_evaluator import InputSample
 from presidio_evaluator.data_generator import PresidioSentenceFaker
-
+from collections import Counter
 
 # Custom Providers
-class SSLProvider(BaseProvider):
-    """Provider for generating fake SSL/TLS private keys."""
-
-    def ssl_key(self):
-        """Generate a fake SSL/TLS private key in PEM format."""
-        key_length = 1704  # Approximate length for a 2048-bit RSA key
-        chars = string.ascii_letters + string.digits + "+/"
-        key_content = "".join(random.choice(chars) for _ in range(key_length))
-        lines = [key_content[i : i + 64] for i in range(0, len(key_content), 64)]
-        key_body = "\n".join(lines)
-        return f"-----BEGIN RSA PRIVATE KEY-----\n{key_body}\n-----END RSA PRIVATE KEY-----"
-
-
 class FingerprintProvider(BaseProvider):
     """Provider for generating fake fingerprint hashes."""
 
@@ -43,23 +29,42 @@ class FingerprintProvider(BaseProvider):
 
 # Registry of custom providers
 CUSTOM_PROVIDERS = {
-    "ssl_key": SSLProvider,
-    "fingerprint_hash": FingerprintProvider,
+    "fingerprint_hash": FingerprintProvider
 }
 
 
-def load_config(config_path: str) -> dict:
-    """Load configuration from YAML file."""
+def load_config(config_path: str, language: str) -> dict:
+    """Load language-specific configuration from YAML file.
+
+    Args:
+        config_path: Path to YAML config file.
+        language: Language key to look up (e.g. 'en_US').
+
+    Returns:
+        Dict with 'sentence_templates' and 'sentence_mapping' for the language.
+    """
     with open(config_path, "r") as f:
         config = yaml.safe_load(f)
 
-    # Validate required fields
+    if "languages" not in config:
+        raise ValueError("Config file must contain a 'languages' key")
+
+    if language not in config["languages"]:
+        available = ", ".join(config["languages"].keys())
+        raise ValueError(
+            f"Language '{language}' not found in config. Available: {available}"
+        )
+
+    lang_config = config["languages"][language]
+
     required_fields = ["sentence_templates", "sentence_mapping"]
     for field in required_fields:
-        if field not in config:
-            raise ValueError(f"Missing required field in config: {field}")
+        if field not in lang_config:
+            raise ValueError(
+                f"Missing required field '{field}' for language '{language}'"
+            )
 
-    return config
+    return lang_config
 
 
 def create_sentence_faker(
@@ -78,7 +83,7 @@ def create_sentence_faker(
     # Add custom providers based on entities used in templates
     for entity in sentence_mapping.keys():
         if entity in CUSTOM_PROVIDERS:
-            sentence_faker.add_provider(CUSTOM_PROVIDERS[entity])
+            sentence_faker.add_provider(CUSTOM_PROVIDERS[entity])  # pyright: ignore[reportArgumentType]
 
     return sentence_faker
 
@@ -86,8 +91,9 @@ def create_sentence_faker(
 def generate_fake_data(
     config_path: str,
     output_folder: str,
-    num_samples: int | None = None,
-    language: str | None = None,
+    prefix: str,
+    num_samples: int,
+    language: str,
 ) -> str:
     """
     Generate fake data based on configuration.
@@ -95,36 +101,33 @@ def generate_fake_data(
     Args:
         config_path: Path to JSON config file
         output_folder: Folder to save output JSON file
-        num_samples: Number of samples to generate (overrides config)
-        language: Language/locale to use (overrides config)
+        prefix: Prefix for the output filename
+        num_samples: Number of samples to generate
+        language: Language/locale to use
 
     Returns:
         Path to the generated output file
     """
-    # Load config
-    config = load_config(config_path)
+    # Load language-specific config
+    config = load_config(config_path, language)
 
-    # Get parameters (CLI args override config values)
     sentence_templates = config["sentence_templates"]
     sentence_mapping = config["sentence_mapping"]
-    final_num_samples = num_samples or config.get("number_of_samples", 100)
-    final_language = language or config.get("language", "en_US")
-    output_name = config.get("output_name", "generated_data")
 
     # Create faker
     sentence_faker = create_sentence_faker(
-        language=final_language,
+        language=language,
         sentence_templates=sentence_templates,
         sentence_mapping=sentence_mapping,
     )
 
     # Generate fake records
-    print(f"Generating {final_num_samples} fake samples...")
-    fake_records = sentence_faker.generate_new_fake_sentences(final_num_samples)
+    print(f"Generating {num_samples} fake samples...")
+    fake_records = sentence_faker.generate_new_fake_sentences(num_samples)
 
     # Prepare output
     os.makedirs(output_folder, exist_ok=True)
-    output_filename = f"{output_name}_size_{final_num_samples}_{final_language}.json"
+    output_filename = f"{prefix}_{num_samples}_{language}.json"
     output_path = os.path.join(output_folder, output_filename)
 
     # Save to JSON
@@ -132,12 +135,9 @@ def generate_fake_data(
     print(f"Generated data saved to: {output_path}")
 
     # Print summary
-    from collections import Counter
-
     count_per_entity = Counter()
     for record in fake_records:
         count_per_entity.update(Counter([span.entity_type for span in record.spans]))
-
     print("\nEntity counts:")
     for entity, count in sorted(count_per_entity.items()):
         print(f"  {entity}: {count}")
@@ -164,18 +164,25 @@ def main():
         help="Output folder path where to write the generated JSON file",
     )
     parser.add_argument(
+        "--prefix",
+        "-p",
+        type=str,
+        required=True,
+        help="Prefix for the output filename (output: prefix_size_language.json)",
+    )
+    parser.add_argument(
         "--num-samples",
         "-n",
         type=int,
-        default=None,
-        help="Number of samples to generate (overrides config value)",
+        required=True,
+        help="Number of samples to generate",
     )
     parser.add_argument(
         "--language",
         "-l",
         type=str,
-        default=None,
-        help="Language/locale to use, e.g., 'en_US', 'de_DE' (overrides config value)",
+        required=True,
+        help="Language/locale to use, e.g., 'en_US', 'de_DE'",
     )
 
     args = parser.parse_args()
@@ -183,6 +190,7 @@ def main():
     generate_fake_data(
         config_path=args.config,
         output_folder=args.output,
+        prefix=args.prefix,
         num_samples=args.num_samples,
         language=args.language,
     )

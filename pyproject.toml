@@ -7,6 +7,8 @@ requires-python = ">=3.13"
 dependencies = [
     "presidio-evaluator>=0.2.5",
     "en-core-web-sm",
+    "de-core-news-sm",
+    "fr-core-news-sm",
     "ipykernel>=7.1.0",
     "nbformat>=4.2.0",
     "plotly>=5.24.0",
@@ -14,5 +16,13 @@ dependencies = [
     "pytest>=9.0.2",
 ]
 
+[project.optional-dependencies]
+lg = ["en-core-web-lg", "de-core-news-lg", "fr-core-news-lg"]
+
 [tool.uv.sources]
 en-core-web-sm = { url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl" }
+en-core-web-lg = { url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.8.0/en_core_web_lg-3.8.0-py3-none-any.whl" }
+de-core-news-sm = { url = "https://github.com/explosion/spacy-models/releases/download/de_core_news_sm-3.8.0/de_core_news_sm-3.8.0-py3-none-any.whl" }
+de-core-news-lg = { url = "https://github.com/explosion/spacy-models/releases/download/de_core_news_lg-3.8.0/de_core_news_lg-3.8.0-py3-none-any.whl" }
+fr-core-news-sm = { url = "https://github.com/explosion/spacy-models/releases/download/fr_core_news_sm-3.8.0/fr_core_news_sm-3.8.0-py3-none-any.whl" }
+fr-core-news-lg = { url = "https://github.com/explosion/spacy-models/releases/download/fr_core_news_lg-3.8.0/fr_core_news_lg-3.8.0-py3-none-any.whl" }

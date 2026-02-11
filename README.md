@@ -1,111 +1,48 @@
-# Presidio POC - Fake PII Data Generator
+# Presidio PII Detection Toolkit
 
-A tool for generating fake PII (Personally Identifiable Information) data using [Presidio Evaluator](https://github.com/microsoft/presidio-research).
+This project evaluates PII (Personally Identifiable Information) detection using [Microsoft Presidio](https://microsoft.github.io/presidio/). It generates synthetic datasets, runs Presidio Analyzer against them, and produces precision/recall/F1 metrics.
 
-## Features
+## Table of Contents
 
-- Generate fake data from customizable sentence templates and custom providers
-- Support for multiple locales/languages
-- Analyzer and custom recognizers
-- Dataset evaluation with Presidio's framework, metrics and insights
-- Prompt evaluation 
+- [Analyzer](./docs/analyzer.md) - How Presidio Analyzer works, recognition pipeline, entity detection flow
+- [Configuration](./docs/configuration.md) - YAML config files for analyzer, NLP engine, and recognizers
+- [Data Generation](./docs/data-generation.md) - Generating synthetic PII datasets with Faker
+- [Evaluation](./docs/evaluation.md) - Running evaluations, understanding metrics and outputs
+- [CLI Reference](./docs/cli-reference.md) - All available commands and arguments
 
-## Installation
+## Quick Start
 
 ```bash
+# Install dependencies
 task install
-```
-Or
-```bash
-uv sync
-```
 
-## Usage
-
-### Task Commands
-
-| Command | Description |
-|---------|-------------|
-| `task lint` | Run linter with auto-fix |
-| `task format` | Format code |
-| `task test` | Run tests |
-
-### Generate Fake PII Data
-
-Generate fake PII data using customizable sentence templates:
-
-```bash
+# Generate a dataset
 task detector:generate
-```
 
-#### Data generation configuration
-
-Create a JSON config file with the following structure:
-
-```json
-{
-    "sentence_templates": [
-        "My name is {{name}}",
-        "Please send it to {{address}}",
-        "My phone number is {{phone_number}}",
-        "Use this card number {{credit_card}} to pay for it"
-    ],
-    "language": "en_US",
-    "number_of_samples": 200,
-    "lower_case_ratio": 0.05,
-    "output_name": "fake_pii_data"
-}
-```
-
-The script generates a JSON file in the Presidio Evaluator `InputSample` format, which can be used for training and evaluating PII detection models.
-
-### Analyzer Configuration
-
-Create a JSON config file with the following structure:
-
-| Field | Required | Description |
-|-------|----------|-------------|
-| `nlp_engine_name` | Yes | NLP engine to use (e.g., `spacy`) |
-| `model_name` | Yes | Model name (e.g., `en_core_web_sm`, `en_core_web_lg`) |
-| `language` | Yes | Language code (e.g., `en`) |
-| `recognizers_to_keep` | No | List of built-in recognizers to enable (e.g., `SpacyRecognizer`, `EmailRecognizer`) |
-| `custom_recognizers` | No | List of custom pattern-based recognizers |
-| `entity_mappings` | No | Mappings from source entity types to target types |
-| `allow_missing_mappings` | No | If `true`, entities without explicit mappings keep their original type. If `false`, unmapped entities raise an error. Default: `true` |
-| `score_threshold` | No | Minimum confidence score for detections (0.0 - 1.0) |
-
-### Custom Recognizers
-
-Define custom pattern-based recognizers for entities not covered by built-in recognizers:
-
-```json
-{
-    "entity_type": "SSL",
-    "patterns": [
-        {
-            "name": "ssl_key_pattern",
-            "regex": "-----BEGIN\\s+(RSA\\s+)?PRIVATE\\s+KEY-----[\\s\\S]*?-----END\\s+(RSA\\s+)?PRIVATE\\s+KEY-----",
-            "score": 0.6
-        }
-    ]
-}
-```
-
-### Evaluate Dataset
-
-Evaluate Presidio's PII detection accuracy against a JSON dataset containing labeled PII samples. This command runs the analyzer on the dataset, compares predictions against ground truth, and outputs:
-- Precision, recall, and F-score metrics (`metrics.json`)
-- False positives and false negatives (`false_positives.csv`, `false_negatives.csv`)
-- Confusion matrix visualization (`confusion_matrix.html`)
-
-```bash
+# Evaluate
 task detector:evaluate
-```
 
-### Evaluate Prompt
-
-Analyze a single text input for PII entities in real-time. This is useful for quick testing and debugging of the analyzer configuration. The command displays detected entities with their type, position, confidence score, and analysis time.
-
-```bash
+# Quick single-text analysis
 task detector:prompt_evaluate
 ```
+
+## Supported Languages
+
+| Language | Locale | spaCy Model | Status |
+|----------|--------|-------------|--------|
+| English | `en_US` | `en_core_web_lg` | Supported |
+| German | `de_DE` | `de_core_news_lg` | Supported |
+| French | `fr_FR` | `fr_core_news_lg` | Supported |
+
+## Supported Entity Types
+
+| Entity | Detection Method | Example |
+|--------|-----------------|---------|
+| `PERSON` | spaCy NER | John Doe |
+| `LOCATION` | spaCy NER | 123 Main St, Berlin |
+| `DATE_TIME` | spaCy NER + DateRecognizer | 1990-01-15 |
+| `PHONE_NUMBER` | PhoneRecognizer + custom regex | +49 30 1234567 |
+| `EMAIL_ADDRESS` | EmailRecognizer | user@example.com |
+| `CREDIT_CARD` | CreditCardRecognizer + custom regex | 4111 1111 1111 1111 |
+| `IBAN_CODE` | IbanRecognizer | DE89 3704 0044 0532 0130 00 |
+| `BIOMEDICAL` | Custom regex (fingerprint hash) | SHA256:AA:BB:CC:... |

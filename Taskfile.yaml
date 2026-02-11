@@ -5,7 +5,7 @@ tasks:
   install:
     desc: Install project dependencies
     cmds:
-      - uv sync
+      - uv sync --extra lg
   
   lint:
     desc: Run linter
@@ -25,14 +25,19 @@ tasks:
   detector:generate:
     desc: Generate fake PII data using Presidio Evaluator
     cmds:
-      - uv run resources/generate_fake_data.py --config resources/config/generate-data-config.yaml --output resources/data
+      - uv run python -m resources.generate_dataset -c resources/config/generate-dataset-config.yaml -o resources/data -p fake_pii_data -n 200 -l en_US
 
   detector:evaluate:
     desc: Evaluate PII detection on a JSON dataset
     cmds:
-      - uv run resources/evaluate_dataset.py --input resources/data/fake_pii_data_size_200_en_US.json --output evaluation_output --score-threshold 0.4
+      - uv run python -m resources.evaluate_dataset -i resources/data/fake_pii_data_size_200_en_US.json -o evaluation_output -l en
 
   detector:prompt_evaluate:
     desc: Evaluate PII detection using prompt-based approach
     cmds:
-      - uv run resources/evaluate_prompt.py --text "John Doe's email is john.doe@example.com" --language "en"
+      - uv run python -m resources.evaluate_prompt --text "John Doe's email is john.doe@example.com" --language "en"
+
+  detector:benchmark:
+    desc: Benchmark analyzer performance across multiple dimensions
+    cmds:
+      - uv run python -m resources.benchmark_analyzer --iterations 5 --models en_core_web_sm

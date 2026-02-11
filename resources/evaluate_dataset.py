@@ -34,6 +34,7 @@ from .scripts.evaluation import build_entities_mapping, run_evaluation, create_e
 def evaluate(
     input_path: str,
     output_path: str,
+    language: str = "en",
 ) -> EvaluationOutput:
     """
     Main evaluation function.
@@ -41,6 +42,7 @@ def evaluate(
     Args:
         input_path: Path to input JSON dataset
         output_path: Path to output directory for results
+        language: Language code for analysis (e.g. 'en', 'de')
 
     Returns:
         EvaluationOutput with metrics and errors
@@ -77,7 +79,7 @@ def evaluate(
 
     # Run evaluation
     results, _ = run_evaluation(
-        dataset_mapped, analyzer_engine
+        dataset_mapped, analyzer_engine, language=language
     )
 
     # Extract errors (these methods return None when no errors found)
@@ -135,13 +137,21 @@ Examples:
         required=True,
         help="Path to output directory for results",
     )
+    parser.add_argument(
+        "--language",
+        "-l",
+        type=str,
+        default="en",
+        help="Language code for analysis, e.g. 'en', 'de' (default: en)",
+    )
 
     args = parser.parse_args()
 
     # Run evaluation
     evaluate(
         input_path=args.input,
-        output_path=args.output
+        output_path=args.output,
+        language=args.language,
     )
 
 

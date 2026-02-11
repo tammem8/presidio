@@ -58,20 +58,26 @@ def build_entities_mapping(analyzer_engine: AnalyzerEngine) -> Dict[str, str]:
 def run_evaluation(
     dataset: List[InputSample],
     analyzer_engine: AnalyzerEngine,
+    language: str = "en",
 ) -> Tuple[Any, Any]:
     """Run the evaluation and return results.
 
     Args:
         dataset: List of InputSample objects to evaluate.
         analyzer_engine: Configured Presidio AnalyzerEngine.
-        score_threshold: Minimum score threshold for detections.
+        language: Language code for analysis (e.g. 'en', 'de').
 
     Returns:
         Tuple of (aggregated results, individual evaluation results).
     """
-    print("Running evaluation...")
+    print(f"Running evaluation (language={language})...")
+    model = PresidioAnalyzerWrapper(
+        analyzer_engine=analyzer_engine,
+        score_threshold=analyzer_engine.default_score_threshold,
+        language=language,
+    )
     evaluator = SpanEvaluator(
-        model=analyzer_engine, 
+        model=model,
         skip_words=[],
     )
     evaluation_results = evaluator.evaluate_all(dataset)
